@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNOPA</title>
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- pagedone -->
+    <link href="../src/css/pagedone.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/css/common.css" />
+    <link rel="stylesheet" href="../src/css/index.css" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../src/js/pagedone.min.js"></script>
+    <script src="../src/js/index.js"></script>
+</head>
+
+<body>
+    <!-- Main navigation container -->
+    <nav
+        class="fixed inset-x-0 mx-auto w-11/12 max-w-screen-xl px-10 py-3 top-3 rounded-xl bg-white bg-opacity-50 backdrop-blur backdrop-saturate-150 z-[9999] lg:px-10 lg:py-3">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="mr-4 block cursor-pointer py-3 text-2xl font-semibold">
+                SNOPA
+            </a>
+            <div class="hidden lg:block">
+                <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Home</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Ski Courses</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">About Us</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Reservation</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Snow Status</a>
+                    </li>
+                    <div
+                        class="flex items-center pl-4 ml-10 gap-4 border border-l-gray-400 border-t-0 border-b-0 border-r-0">
+                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full bg-blue-600 text-white">Zh</a>
+                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full border border-blue-600">En</a>
+                    </div>
+                </ul>
+            </div>
+            <button
+                class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+                type="button">
+                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <section>
+        <div class="container flex inset-x-0 mx-auto relative pt-24 px-30 min-h-768-px h-screen">
+            >
+            <img class="absolute top-35 left-24 w-680-px -z-10 sm:mt-0" src="../src/img/img_logo_logomark.svg"
+                alt="..." />
+            <div class="w-full flex ml-auto justify-end items-center">
+                <div class="max-w-660-px md:w-8/12 lg:w-3/4">
+                    <div class="pt-32 sm:pt-0">
+                        <h1
+                            class="font-semibold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-100">
+                            Embrace the Snow Enjoy the Journey
+                        </h1>
+                        <h4 class="mt-6 text-neutral-400">
+                            Professional ski coaching, from basics to freedom
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Special -->
+    <section>
+        <div class="mx-auto pt-20 pb-40 px-30">
+            <div class="title-wrap flex flex-col gap-10">
+                <h2 class="font-semibold">Special</h2>
+                <h3 class="">
+                    SNOPA 致力於在安全的前提下，支持不同的滑雪者體驗此項活動，在大自然的陪伴中獲得更多樂趣與成就
+                </h3>
+            </div>
+            <div class="grid grid-cols-3 gap-10">
+                <div class="card card-special">
+                    <div class="block border-2 border-white w-20 h-20 rounded-full"></div>
+                    <h4>專業證照教練團隊</h4>
+                    <p>
+                        教練團隊擁有多年實戰經驗。能根據學員不同需求與能力，提供適合的練習與指導
+                    </p>
+                </div>
+                <div class="card-special">
+                    <div class="block border-2 border-white w-20 h-20 rounded-full"></div>
+                    <h4>多語言教學團隊</h4>
+                    <p>
+                        SNOPA
+                        擁有來自世界各地的專業滑雪教練，利於學員跨語言障礙，專注於滑雪練習
+                    </p>
+                </div>
+                <div class="card card-special">
+                    <div class="block border-2 border-white w-20 h-20 rounded-full"></div>
+                    <h4>多樣化的滑雪課程</h4>
+                    <p>
+                        除了不同能力等級的課程，SNOPA
+                        提供豐富多樣的滑雪活動，滿足不同學員的需求
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service -->
+    <section>
+        <div class="py-50 pl-30 bg-neutral-50">
+            <div class="title-wrap flex gap-40 pr-30">
+                <h2 class="font-semibold">Service</h2>
+                <h3 class="">
+                    SNOPA
+                    提供多樣化的服務，無論學員是初學者還是進階滑雪者，希望都能找到適合的課程，和我們一起體驗滑雪樂趣
+                </h3>
+            </div>
+            <div class="pt-20 flex gap-16 overflow-hidden">
+                <div class="card-service">
+                    <div class="card-service-content">
+                        <div class="order-wrap">
+                            <span class="order">(01)</span>
+                        </div>
+                        <div class="flex pb-18">
+                            <h3>多樣化的滑雪課程</h3>
+                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                        </div>
+                        <p>
+                            TTG senior management will work with you to identify how TT
+                            Global’s capabilities can be best applied to meet your
+                            objectives. Wherever our services are being delivered or
+                            whatever query you have, you will always have a single point of
+                            contact.
+                        </p>
+                    </div>
+                    <div class="h-100 w-80 bg-primary-100"></div>
+                </div>
+                <div class="card-service">
+                    <div class="card-service-content">
+                        <div class="order-wrap">
+                            <span class="order">(01)</span>
+                        </div>
+                        <div class="flex pb-18">
+                            <h3>多樣化的滑雪課程</h3>
+                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                        </div>
+                        <p>
+                            TTG senior management will work with you to identify how TT
+                            Global’s capabilities can be best applied to meet your
+                            objectives. Wherever our services are being delivered or
+                            whatever query you have, you will always have a single point of
+                            contact.
+                        </p>
+                    </div>
+                    <div class="h-100 w-80 bg-primary-100"></div>
+                </div>
+                <div class="card-service">
+                    <div class="card-service-content">
+                        <div class="order-wrap">
+                            <span class="order">(01)</span>
+                        </div>
+                        <div class="flex pb-18">
+                            <h3>多樣化的滑雪課程</h3>
+                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                        </div>
+                        <p>
+                            TTG senior management will work with you to identify how TT
+                            Global’s capabilities can be best applied to meet your
+                            objectives. Wherever our services are being delivered or
+                            whatever query you have, you will always have a single point of
+                            contact.
+                        </p>
+                    </div>
+                    <div class="h-100 w-80 bg-primary-100"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial -->
+    <section>
+        <div class="container flex inset-x-0 mx-auto w-full relative pt-30 pb-40">
+            <div class="swiper default-carousel swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="h-96 px-30 flex justify-center items-center gap-6">
+                            <div class="card-testimonial">
+                                <div class="title-wrap">
+                                    <div class="block border-2 border-neutral-700 w-14 h-14 rounded-full"></div>
+                                    <div class="title">
+                                        <h4>Project Planning</h4>
+                                        <p>Project Planning</p>
+                                    </div>
+                                </div>
+                                <p class="caption">
+                                    “TTG senior management will work with you to identify how TT
+                                    Global’s capabilities can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever our”
+                                </p>
+                            </div>
+                            <div class="card-testimonial">
+                                <div class="title-wrap">
+                                    <div class="block border-2 border-neutral-700 w-14 h-14 rounded-full"></div>
+                                    <div class="title">
+                                        <h4>Project Planning</h4>
+                                        <p>Project Planning</p>
+                                    </div>
+                                </div>
+                                <p class="caption">
+                                    “TTG senior management will work with you to identify how TT
+                                    Global’s capabilities can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever our”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="h-96 px-30 flex justify-center items-center gap-6">
+                            <div class="card-testimonial">
+                                <div class="title-wrap">
+                                    <div class="block border-2 border-neutral-700 w-14 h-14 rounded-full"></div>
+                                    <div class="title">
+                                        <h4>Project Planning</h4>
+                                        <p>Project Planning</p>
+                                    </div>
+                                </div>
+                                <p class="caption">
+                                    “TTG senior management will work with you to identify how TT
+                                    Global’s capabilities can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever our”
+                                </p>
+                            </div>
+                            <div class="card-testimonial">
+                                <div class="title-wrap">
+                                    <div class="block border-2 border-neutral-700 w-14 h-14 rounded-full"></div>
+                                    <div class="title">
+                                        <h4>Project Planning</h4>
+                                        <p>Project Planning</p>
+                                    </div>
+                                </div>
+                                <p class="caption">
+                                    “TTG senior management will work with you to identify how TT
+                                    Global’s capabilities can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever our”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="h-96 px-30 flex justify-center items-center gap-6">
+                            <div class="card-testimonial">
+                                <div class="title-wrap">
+                                    <div class="block border-2 border-neutral-700 w-14 h-14 rounded-full"></div>
+                                    <div class="title">
+                                        <h4>Project Planning</h4>
+                                        <p>Project Planning</p>
+                                    </div>
+                                </div>
+                                <p class="caption">
+                                    “TTG senior management will work with you to identify how TT
+                                    Global’s capabilities can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever our”
+                                </p>
+                            </div>
+                            <div class="card-testimonial">
+                                <div class="title-wrap">
+                                    <div class="block border-2 border-neutral-700 w-14 h-14 rounded-full"></div>
+                                    <div class="title">
+                                        <h4>Project Planning</h4>
+                                        <p>Project Planning</p>
+                                    </div>
+                                </div>
+                                <p class="caption">
+                                    “TTG senior management will work with you to identify how TT
+                                    Global’s capabilities can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever can be best applied to meet your
+                                    objectives. Wherever our”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-8 lg:justify-start justify-center">
+                    <button id="slider-button-left"
+                        class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5 hover:bg-indigo-600"
+                        data-carousel-prev>
+                        <svg class="h-5 w-5 text-indigo-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="slider-button-right"
+                        class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !right-5 hover:bg-indigo-600"
+                        data-carousel-next>
+                        <svg class="h-5 w-5 text-indigo-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor"
+                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQs -->
+    <section>
+        <div class="w-full px-30 py-40 bg-neutral-20">
+            <div class="title-wrap flex flex-col gap-10">
+                <h2 class="font-semibold">FAQs</h2>
+                <h3>
+                    TTG senior management will work with you to identify how TT Global’s capabilities.
+                </h3>
+            </div>
+            <div class="accordion-group" data-accordion="default-accordion">
+                <div class="accordion-item active" id="">
+                    <div class="accordion-title">
+                        <h3>滑雪課程分為哪些等級 ?</h3>
+                        <div class="accordion-toggle">
+                            <img class="toggle-icon" src="../src/img/icon_dropdown_down.svg" alt="dropdown"></img>
+                        </div>
+                    </div>
+                    <p class="accordion-content">SNOPA 提供從初階、中階到高階的課程，您可以根據自身的滑雪經驗與能力選擇合適的班級，教練也會根據您的進步情況，及時調整課程內容與練習規劃。</p>
+
+                </div>
+                <div class="accordion-item" id="">
+                    <div class="accordion-title">
+                        <h3>如果我不確定適合參加哪種課程，該怎麼辦？</h3>
+                        <div class="accordion-toggle">
+                            <img class="toggle-icon" src="../src/img/icon_dropdown_down.svg" alt="dropdown"></img>
+                        </div>
+                    </div>
+                    <p class="accordion-content" style="display: none;">可以透過 SNOPA @LINE 官方帳號 、或是電子郵件寄信給我們 (可參考聯絡資訊)。利用課前諮詢服務，SNOPA 團隊會根據您的滑雪經驗、需求和目標，幫助你選擇最適合的課程。</p>
+                </div>
+                <div class="accordion-item" id="">
+                    <div class="accordion-title">
+                        <h3>需要多久提前預訂滑雪課程 ?</h3>
+                        <div class="accordion-toggle">
+                            <img class="toggle-icon" src="../src/img/icon_dropdown_down.svg" alt="dropdown"></img>
+                        </div>
+                    </div>
+                    <p class="accordion-content" style="display: none;">最早需要提前 1 天預約，我們建議至少提前半年規劃滑雪行程，特別是在滑雪旺季（如寒假或聖誕假期）時，這樣可以確保您能選擇到機票、住宿與合適的時間。如果您有特定需求或希望選擇個人課程，建議也儘早聯絡我們，以便我們提前與您討論符合您需求的課程。</p>
+                </div>
+                <div class="accordion-item" id="">
+                    <div class="accordion-title">
+                        <h3>我需要自己準備那些裝備？</h3>
+                        <div class="accordion-toggle">
+                            <img class="toggle-icon" src="../src/img/icon_dropdown_down.svg" alt="dropdown"></img>
+                        </div>
+                    </div>
+                    <p class="accordion-content" style="display: none;">我們建議學員自行購買以下個人裝備，這些裝備更適合根據個人需求選擇，並可在多次滑雪中長期使用。</p>
+                </div>
+                <div class="accordion-item" id="">
+                    <div class="accordion-title">
+                        <h3>高階滑雪課程會有什麼挑戰？</h3>
+                        <div class="accordion-toggle">
+                            <img class="toggle-icon" src="../src/img/icon_dropdown_down.svg" alt="dropdown"></img>
+                        </div>
+                    </div>
+                    <p class="accordion-content" style="display: none;">高階課程將帶您挑戰更高難度的雪道，教練會根據您的能力帶您到不同的滑道進行技術磨練，並即時提供動作反饋。這是針對已有經驗的滑雪者設計的課程，適合尋求進一步挑戰的學員。</p>
+                </div>
+            </div>
+    </section>
+    <!-- Footer -->
+    <section>
+        <div class="footer flex py-20 px-30 bg-neutral-50 align-bottom">
+            <div class="w-3/12">
+                <img class="w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
+                <p class="caption text-neutral-700">+1 (232) 576-98-07</p>
+                <p class="mt-3 caption text-neutral-400">3 Chome-16-3 Otemachi, Maebashi, Gunma 371-0026, Japan</p>
+            </div>
+            <div class="ml-auto mt-auto">
+                <ul class="flex gap-4 flex-wrap">
+                    <li class="menu-item"><a>Home</a></li>
+                    <li class="menu-item"><a>Ski Courses</a></li>
+                    <li class="menu-item"><a>About Us</a></li>
+                    <li class="menu-item"><a>Reservation</a></li>
+                    <li class="menu-item"><a></a>Snow Status</li>
+                </ul>
+                <span class="block caption text-end text-neutral-400">© Copyright 2024. SNOPA. All Right Reserved.</span>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

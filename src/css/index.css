@@ -1,0 +1,228 @@
+.card-special {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    color: #ffffff;
+    border-radius: 8px;
+    background: rgb(70,178,255);
+    background: linear-gradient(45deg, rgba(70,178,255,1) 0%, rgba(10,97,245,1) 100%);
+}
+
+/* service */
+
+.card-service {
+    display: flex;
+    gap: 48px;
+}
+
+.card-service-content {
+    display: block;
+    width: 468px;
+    padding: 12px 32px;
+}
+
+.order-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 88px;
+}
+
+.order-wrap::after {
+    content: "";
+    width: calc(100% - 42px);
+    border-bottom: 1px solid #B9C4CD;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+}
+
+.order {
+    font-size: 0.875rem;
+    color: var(--nuetral-400);
+    color: #778599;
+}
+
+/* testimonial */
+
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 60px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+}
+    .swiper-pagination-bullet {
+    background: #4f46e5;
+}
+
+.card-testimonial {
+    width: 50%;
+    padding: 40px 48px;
+    background-color: var(--nuetral-0);
+    background-color: #fff;
+    background-color: var(--nuetral-100);
+    border: 1px solid #B9C4CD;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.card-testimonial::before {    
+    content: "";
+    position: absolute;
+    background-image: url(../img/img_logo_logomark.svg);
+    background-size: 64% auto;
+    background-repeat: no-repeat;
+    background-position: right top;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.05;
+}
+
+.card-testimonial .title-wrap {
+    display: flex;
+    gap: 24px;
+    color: var(--nuetral-400);
+    color: #778599;
+    margin-bottom: 48px;
+}
+
+/* FAQs */
+
+.accordion-item {
+    padding: 48px 0px;
+    border-bottom: 1px solid var(--nuetral-200);
+    border-bottom: 1px solid #B9C4CD;
+    padding-left: 120px;
+    position: relative
+}
+
+.accordion-title {
+    width: 100%; /* 讓 hover 觸發範圍 100% */
+    position: relative; /* for Q */
+    cursor: pointer;
+}
+
+.accordion-title h3{
+    position: relative; /* for underline */
+    cursor: pointer;
+    width: fit-content;
+}
+
+
+.accordion-title:hover h3 {
+    color: var(--primary-400);
+    color: #0A61F5;
+}
+
+/* Q */ 
+.accordion-title::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    color: var(--neutral-0);
+    color: #FFF;
+    font-size: 2rem;
+    background-color: var(--primary-100);
+    background-color: #46B2FF;
+    border-radius: 50%;
+    content: "Q";
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+/* 底線 */ 
+.accordion-title h3::after {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    content: "";
+    background-color: var(--primary-400);
+    background-color: #1b75de;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transition: 0.5s transform ease-in-out; /* 讓偽元素的寬度適配文字的實際寬度 */
+}
+
+.accordion-title:hover h3::after {
+    width: 100%;
+}
+
+/* 滑鼠移開後底線的反向動畫 */
+.accordion-title h3::after {
+    transition: width 0.4s ease-in-out; 
+}
+
+.accordion-content {
+    margin-top: 48px;
+    padding: 12px 88px 12px 0;
+    position: relative;
+}
+
+/* A */ 
+/* .accordion-content::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    color: var(--neutral-700);
+    color: #30343B;
+    font-size: 2rem;
+    background-color: var(--nrutral-0);
+    background-color: #FFF;
+    border: 1px solid var(--neutral-100);
+    border: 1px solid #B9C4CD;
+    border-radius: 50%;
+    content: "A";
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+} */
+
+
+.accordion-toggle {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 8px;
+    border: 1px solid var(--neutral-100);
+    border: 1px solid #B9C4CD;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* 收合 icon 旋轉 */
+.accordion-item.active .toggle-icon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+/* footer */
+.menu-item {
+    padding: 8px 0;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- pagedone -->
+    <link href="../src/css/pagedone.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/css/common.css" />
+    <link rel="stylesheet" href="../src/css/course.css" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../src/js/pagedone.min.js"></script>
+    <script src="../src/js/course.js"></script>
+</head>
+
+<body>
+    <!-- Main navigation container -->
+    <nav
+        class="fixed inset-x-0 mx-auto w-11/12 max-w-screen-xl px-10 py-3 top-3 rounded-xl bg-white bg-opacity-50 backdrop-blur backdrop-saturate-150 z-[9999] lg:px-10 lg:py-3">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="mr-4 block cursor-pointer py-3 text-2xl font-semibold">
+                SNOPA
+            </a>
+            <div class="hidden lg:block">
+                <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Home</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Ski Courses</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">About Us</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Reservation</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="#" class="flex items-center">Snow Status</a>
+                    </li>
+                    <div
+                        class="flex items-center pl-4 ml-10 gap-4 border border-l-gray-400 border-t-0 border-b-0 border-r-0">
+                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full bg-blue-600 text-white">Zh</a>
+                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full border border-blue-600">En</a>
+                    </div>
+                </ul>
+            </div>
+            <button
+                class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+                type="button">
+                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <section>
+        <div class="px-30 pt-64 pb-40">
+            <h1 class="font-semibold">Ski Course</h1>
+            <h4 class="mt-12">SB / Ski 都分成 基礎/中級/進階課程，讓學員在舒適的節奏下提升技能</h4>
+        </div>
+    </section>
+    <!-- Level -->
+    <section>
+        <div class="px-30 py-25 flex gap-8 justify-center align-bottom bg-neutral-50">
+            <div class="level-item">
+                <div class="content">
+                    <h3 class="text-primary-400 font-semibold">Beginning</h3>
+                    <p class="mt-3 text-neutral-400 font-semibold">由零開始到學會 S-turn/Parallel</p>
+                </div>
+                <img src="../src/img/img_course_beginning.svg" alt="">
+            </div>
+            <div class="level-item pb-6">
+                <div class="content">
+                    <h3 class="text-primary-400 font-semibold">Middle</h3>
+                    <p class="mt-3 text-neutral-400 font-semibold">開始學習 Carving/ Short turn/ Ground tricks </p>
+                </div>
+                <img src="../src/img/img_course_middle.svg" alt="">
+            </div>
+            <div class="level-item pb-12">
+                <div class="content">
+                    <h3 class="text-primary-400 font-semibold">Advance</h3>
+                    <p class="mt-3 text-neutral-400 font-semibold">針對不同地形作出相應的調整，目標成為一個全能的 Snowboarder/Skier</p>
+                </div>
+                <img src="../src/img/img_course_advance.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Course detail -->
+    <section>
+        <div class="p-30">
+            <div class="tabs-area">
+                <div class="flex w-fit bg-neutral-50 p-3 rounded-lg">
+                    <ul class="flex flex-wrap transition-all duration-300 overflow-hidden">
+                        <h4 href="javascript:void(0)" class="tablink" data-tab="tabs-with-rounded-1">越後湯澤滑雪場</h4>
+                        <h4 href="javascript:void(0)" class="tablink" data-tab="tabs-with-rounded-2">其他區域滑雪場</h4>
+                    </ul>
+                </div>
+                <div class="mt-3">
+                    <div id="tabs-with-rounded-1" role="tabpanel" aria-labelledby="tabs-with-rounded-item-1"
+                        class="tabcontent">
+                        <div class="ski-park-list flex pt-30 gap-10">
+                            <div>
+                                <h2 class="font-semibold">Skiing parks</h2>
+                                <p class="pt-3 text-neutral-400">湯澤高原滑雪場 / 岩原滑雪場 / 神立滑雪場</p>
+                            </div>
+                            <div class="ml-auto">
+                                <ul class="park-list">
+                                    <li class="park-wrap w-course-content">
+                                        <h2 class="min-w-20 text-neutral-50 font-semibold">01</h2>
+                                        <div class="text-wrap my-auto text-neutral-400">
+                                            <h3 class="font-semibold">GALA 湯澤滑雪場</h3>
+                                            <p class="caption mt-1">GALA 湯澤滑雪場</p>
+                                        </div>
+                                        <div class="arrow-box">
+                                            <img src="../src/img/icon_arrow_right.svg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="park-wrap w-course-content">
+                                        <h2 class="min-w-20 text-neutral-50 font-semibold">02</h2>
+                                        <div class="text-wrap my-auto text-neutral-400">
+                                            <h3 class="font-semibold">岩原滑雪場</h3>
+                                            <p class="caption mt-1">岩原滑雪場敘述</p>
+                                        </div>
+                                        <div class="arrow-box">
+                                            <img src="../src/img/icon_arrow_right.svg" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="park-wrap w-course-content">
+                                        <h2 class="min-w-20 text-neutral-50 font-semibold">03</h2>
+                                        <div class="text-wrap my-auto text-neutral-400">
+                                            <h3 class="font-semibold">神立滑雪場</h3>
+                                            <p class="caption mt-1">神立滑雪場敘述</p>
+                                        </div>
+                                        <div class="arrow-box">
+                                            <img src="../src/img/icon_arrow_right.svg" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="couse-price flex pt-30 gap-10">
+                            <div>
+                                <h2 class="font-semibold">Price</h2>
+                                <p class="pt-3 text-neutral-400">Ski & SB included</p>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="table-area w-course-content">
+                                    <table class="w-full price-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"> 時數 /人 </th>
+                                                <th scope="col"> 1 人 </th>
+                                                <th scope="col"> 2 人 </th>
+                                                <th scope="col"> 3-6 人 </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-neutral-50 ">
+                                            <tr>
+                                                <td> 3 小時</td>
+                                                <td> NT. 8,000 </td>
+                                                <td> NT. 10,000</td>
+                                                <td> NT. 12,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td> 6 小時</td>
+                                                <td> NT. 14,500 </td>
+                                                <td> NT. 16,000 </td>
+                                                <td> NT. 18,000 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 2 日共 12 小時</td>
+                                                <td> NT. 30,500 </td>
+                                                <td> NT. 33,000 </td>
+                                                <td> NT. 36,000 </td>
+                                            </tr>
+                                            <tr>
+                                                <td> 3 日共 18 小時</td>
+                                                <td> NT. 46,000 </td>
+                                                <td> NT. 50,000 </td>
+                                                <td> NT. 53,000 </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-memo w-course-content">
+                            <p class="cption">3 小時課程時間：上午 09:00-12:00；下午 13:00-16:00</p>
+                            <p class="cption mt-4">6 小時課程時間：上午 09:00 到下午 16:00 間進行 6 小時課程，不包含午餐時間</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs-with-rounded-2" class="hidden tabcontent" role="tabpanel"
+                    aria-labelledby="tabs-with-rounded-item-2">
+                    <div class="ski-park-list flex pt-30 gap-10">
+                        <div>
+                            <h2 class="font-semibold">Skiing parks</h2>
+                            <p class="pt-3 text-neutral-400">安比高原滑雪場 / 八幡平滑雪場 / 雫石滑雪場</p>
+                        </div>
+                        <div class="ml-auto">
+                            <ul class="park-list">
+                                <li class="park-wrap w-course-content">
+                                    <h2 class="min-w-20 text-neutral-50 font-semibold">01</h2>
+                                    <div class="text-wrap my-auto text-neutral-400">
+                                        <h3 class="font-semibold">安比高原滑雪場</h3>
+                                        <p class="caption mt-1">安比高原滑雪場敘述</p>
+                                    </div>
+                                    <div class="arrow-box">
+                                        <img src="../src/img/icon_arrow_right.svg" alt="">
+                                    </div>
+                                </li>
+                                <li class="park-wrap w-course-content">
+                                    <h2 class="min-w-20 text-neutral-50 font-semibold">02</h2>
+                                    <div class="text-wrap my-auto text-neutral-400">
+                                        <h3 class="font-semibold">八幡平滑雪場</h3>
+                                        <p class="caption mt-1">八幡平滑雪場敘述</p>
+                                    </div>
+                                    <div class="arrow-box">
+                                        <img src="../src/img/icon_arrow_right.svg" alt="">
+                                    </div>
+                                </li>
+                                <li class="park-wrap w-course-content">
+                                    <h2 class="min-w-20 text-neutral-50 font-semibold">03</h2>
+                                    <div class="text-wrap my-auto text-neutral-400">
+                                        <h3 class="font-semibold">雫石滑雪場</h3>
+                                        <p class="caption mt-1">雫石滑雪場敘述</p>
+                                    </div>
+                                    <div class="arrow-box">
+                                        <img src="../src/img/icon_arrow_right.svg" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="couse-price flex pt-30 gap-10">
+                        <div>
+                            <h2 class="font-semibold">Price</h2>
+                            <p class="pt-3 text-neutral-400">Ski & SB included</p>
+                        </div>
+                        <div class="ml-auto">
+                            <div class="table-area w-course-content">
+                                <table class="w-full price-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"> 時數 /人 </th>
+                                            <th scope="col"> 1 人 </th>
+                                            <th scope="col"> 2 人 </th>
+                                            <th scope="col"> 3-6 人 </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-neutral-50 ">
+                                        <tr>
+                                            <td> 3 小時</td>
+                                            <td> NT. 16,000 </td>
+                                            <td> NT. 18,000</td>
+                                            <td> NT. 20,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td> 6 小時</td>
+                                            <td> NT. 20,500 </td>
+                                            <td> NT. 22,000 </td>
+                                            <td> NT. 26,000 </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2 日共 12 小時</td>
+                                            <td> NT. 32,500 </td>
+                                            <td> NT. 35,000 </td>
+                                            <td> NT. 48,000 </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 3 日共 18 小時</td>
+                                            <td> NT. 48,000 </td>
+                                            <td> NT. 52,000 </td>
+                                            <td> NT. 55,000 </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-memo w-course-content">
+                        <p class="cption">3 小時課程時間：上午 09:00-12:00；下午 13:00-16:00</p>
+                        <p class="cption mt-4">6 小時課程時間：上午 09:00 到下午 16:00 間進行 6 小時課程，不包含午餐時間</p>
+                    </div>
+                </div>
+            </div>
+            <div class="notice">
+                <h3 class="font-semibold text-neutral-400">Notice</h3>
+                <ul class="text-neutral-400 pt-4">
+                    <li>1 位教練同時最多教 8 位學生</li>
+                    <li>同一堂課程中，1 位教練只提供單板或是雙板其一項目教學，如於同一堂課需要 2 種滑雪項目教學，請預約 2 位教練</li>
+                    <li>報名 2 日以上滑雪課程，如要更換雪場上課，價格會以費用表較高的方案收費</li>
+                    <li>課程費用已包含滑雪教練所有花費( 課程費、纜車費、交通費、其它必要開銷 )</li>
+                    <li>須留意，課程費用不包含個人滑雪裝備租借、纜車費、旅遊保險、滑雪場個人花費</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

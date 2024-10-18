@@ -1,0 +1,139 @@
+/* level */
+
+.level-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 271px;
+}
+
+.level-item .content {
+    padding: 24px;
+    margin-bottom: 32px;
+    min-height: 144px;
+    align-items: center;
+    background-color: var(--nuetral-0);
+    background-color: #FFF;
+    border-radius: 80px;
+    text-align: center;
+}
+
+/* skiing park */
+
+/* tabs */
+.tablink {
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--neutral-400);
+    color: #778599;
+    cursor: pointer;
+}
+
+.tablink.active {
+    background-color: var(--neutral-0);
+    background-color: #FFF;
+    color: var(--primary-400);
+    color: #0A61F5;
+}
+
+/* content-rightside */
+.w-course-content {
+    width: 640px;
+}
+
+.park-wrap {
+    display: flex;
+    align-items: center;
+    padding: 12px 8px 12px 24px;
+    border-top: 1px solid var(--nuetral-100);
+    border-top: 1px solid #B9C4CD;
+    cursor: pointer;
+}
+
+
+.park-wrap:last-of-type {
+    border-bottom: 1px solid var(--nuetral-100);
+    border-bottom: 1px solid #B9C4CD;
+}
+
+
+.park-wrap h2 {
+    min-width: 76px;
+    margin-right: 40px;
+    color: var(--nuetral-50);
+    color: #E9EDF0;
+    font-weight: 600;
+}
+
+.arrow-box {
+    padding: 40px 8px;
+    margin-left: auto;
+    background-color: var(--neutral-20);
+    background-color: #F7F7F7;
+    border-radius: 8px;
+}
+
+.arrow-box img {
+    width: 16px;
+    height: 16px;
+}
+
+
+.table-area {
+    border-radius: 8px;
+    border: 1px;
+    overflow: hidden; /*clip 表格圓角*/
+}
+
+.price-table {
+    text-align: center;
+    background-color: var(--neutral-20);
+    background-color: #F7F7F7;
+}
+
+.price-table thead tr th {
+    padding: 16px 16px;
+    background-color: var(--primary-400);
+    background-color: #0A61F5;
+    color: var(--neutral-0);
+    color: #FFF;
+    text-align: center;
+}
+
+.price-table tbody tr td {
+    padding: 32px 12px;
+}
+
+.price-table tbody tr td:first-of-type {
+    background-color: var(--neutral-50);
+    background-color: #E9EDF0;
+}
+
+.course-memo {
+    margin-left: auto;
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: var(--neutral-20);
+    background-color: #F7F7F7;
+}
+
+/* notice */
+.notice ul li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.notice ul li::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/icon_snow.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);  
+}    
