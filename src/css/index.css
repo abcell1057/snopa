@@ -1,3 +1,7 @@
+.hero-logo-mark {
+    opacity: 20%;
+}
+
 .card-special {
     display: flex;
     flex-direction: column;
@@ -5,8 +9,12 @@
     padding: 32px;
     color: #ffffff;
     border-radius: 8px;
-    background: rgb(70,178,255);
     background: linear-gradient(45deg, rgba(70,178,255,1) 0%, rgba(10,97,245,1) 100%);
+}
+
+.card-special img{
+    width: 100px;
+    height: 100px;
 }
 
 /* service */
@@ -22,6 +30,11 @@
     padding: 12px 32px;
 }
 
+.card-service img {
+    width: 300px;
+    height: 400px;
+}
+
 .order-wrap {
     width: 100%;
     position: relative;
@@ -33,7 +46,7 @@
 .order-wrap::after {
     content: "";
     width: calc(100% - 42px);
-    border-bottom: 1px solid #B9C4CD;
+    border-bottom: 1px solid var(--nuetral-100);
     position: absolute;
     right: 0px;
     bottom: 10px;
@@ -42,7 +55,6 @@
 .order {
     font-size: 0.875rem;
     color: var(--nuetral-400);
-    color: #778599;
 }
 
 /* testimonial */
@@ -55,17 +67,31 @@
     transition-timing-function: linear !important;
     position: relative;
 }
-    .swiper-pagination-bullet {
-    background: #4f46e5;
+
+.swiper-pagination-bullet {
+    background: var(--primary-400);
+}
+
+.swiper-button-prev::after, 
+.swiper-button-next::after {
+    display: none;
+}
+
+#slider-button-left,
+#slider-button-right {
+    border-color: var(--nuetral-100);
+}
+
+#slider-button-left svg,
+#slider-button-right svg {
+    color: var(--primary-400);
 }
 
 .card-testimonial {
     width: 50%;
     padding: 40px 48px;
     background-color: var(--nuetral-0);
-    background-color: #fff;
     background-color: var(--nuetral-100);
-    border: 1px solid #B9C4CD;
     border-radius: 0.5rem;
     position: relative;
 }
@@ -88,7 +114,6 @@
     display: flex;
     gap: 24px;
     color: var(--nuetral-400);
-    color: #778599;
     margin-bottom: 48px;
 }
 
@@ -97,7 +122,6 @@
 .accordion-item {
     padding: 48px 0px;
     border-bottom: 1px solid var(--nuetral-200);
-    border-bottom: 1px solid #B9C4CD;
     padding-left: 120px;
     position: relative
 }
@@ -117,7 +141,6 @@
 
 .accordion-title:hover h3 {
     color: var(--primary-400);
-    color: #0A61F5;
 }
 
 /* Q */ 
@@ -135,7 +158,6 @@
     color: #FFF;
     font-size: 2rem;
     background-color: var(--primary-100);
-    background-color: #46B2FF;
     border-radius: 50%;
     content: "Q";
     -webkit-box-align: center;
@@ -152,7 +174,6 @@
     width: 0;
     content: "";
     background-color: var(--primary-400);
-    background-color: #1b75de;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
     transition: 0.5s transform ease-in-out; /* 讓偽元素的寬度適配文字的實際寬度 */
@@ -206,7 +227,6 @@
     right: 0;
     padding: 8px;
     border: 1px solid var(--neutral-100);
-    border: 1px solid #B9C4CD;
     width: 40px;
     height: 40px;
     border-radius: 50%;

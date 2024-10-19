@@ -52,12 +52,10 @@
     cursor: pointer;
 }
 
-
 .park-wrap:last-of-type {
     border-bottom: 1px solid var(--nuetral-100);
     border-bottom: 1px solid #B9C4CD;
 }
-
 
 .park-wrap h2 {
     min-width: 76px;
@@ -121,9 +119,13 @@
 }
 
 /* notice */
+.notice {
+    padding-top: 80px;
+}
+
 .notice ul li {
     position: relative;
-    padding-left: 28px;
+    padding: 12px 0 12px 28px;
 }
 
 .notice ul li::before {
@@ -134,6 +136,13 @@
     width: 16px;
     height: 16px;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);  
+    top: 16px;
 }    
+
+.semi-circle {
+    width: 100;
+    background-color: var(--primary-50);
+    background-color: #BBE0F0;
+    border-radius: 50% 50% 0 0;
+    height: 40px;
+}

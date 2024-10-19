@@ -3,6 +3,78 @@
     line-height: 16px;
 }
 
+/* hero h1 漸層顏色 */
+.hero h1 {
+    background: linear-gradient(to right, #0A61F5, #46B2FF);
+    background: -webkit-linear-gradient(to right, #0A61F5, #46B2FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.side-nav .item {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.side-nav .item span {
+    padding: 6px 0;
+    padding-left: 12px;
+    position: relative;
+    color: var(--neutral-400);
+}
+
+.side-nav .item:last-child {
+    padding-bottom: 0;
+}
+
+.side-nav .item span:hover {
+    color: var(--primary-400);
+}
+
+.side-nav .item img {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+}
+
+.side-nav .active span {
+    color: var(--primary-400);
+}
+
+.side-nav .active img {
+    background-color: var(--primary-400);
+}
+
+/* .side-nav li.active::before {
+    position: absolute;
+    content:"";
+    width: 16px;
+    height: 16px;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    background-color: var(--primary-400);
+    background-color: #0A61F5;
+    background-image: url(../img/icon_dropdown_down.svg);
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(270deg);
+} */
+
 .title-wrap {
     margin-bottom: 80px;
+}
+
+/* footer 待解決*/
+.footer .logo-mark {
+    color: var(--neutral-100);
+    color: #ffffff;
 }

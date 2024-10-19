@@ -1,0 +1,43 @@
+.hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    background-color: var(--neutral-100);
+    width: 1px;
+    height: 100%;
+    left: 8px;
+    top: 16px;
+    padding-bottom: 32px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 32px;
+    padding-left: 80px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    background-color: var(--primary-400);
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 16px;
+}   

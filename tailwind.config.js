@@ -22,7 +22,7 @@ module.exports = {
         'default': '#30343B',
       },
       fontFamily: {
-        sans: ['Manrope','Helvetica', 'Arial', 'sans-serif']
+        sans: ['Manrope', 'Helvetica', 'Arial', 'sans-serif'],
       },
       padding: {
         "12": "48px",
@@ -30,7 +30,7 @@ module.exports = {
         "25": "100px",
         "30": "120px",
         "50": "200px",
-        "64": "256px"
+        "64": "256px",
       },
       width: {
         "680-px": "680px",
@@ -49,16 +49,25 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addBase, config, theme }) {
+    plugin(function({ addBase, theme }) { // 直接使用 theme
       addBase({
-        'html': { color: theme('colors.neutral.700')}, // 調整預設字體顏色
-        'h1': { fontSize: config('theme.fontSize.7xl')},
-        'h2': { fontSize: config('theme.fontSize.6xl')},
-        'h3': { fontSize: config('theme.fontSize.3xl')},
-        'h4': { fontSize: config('theme.fontSize.2xl')},
+        'html': { color: theme('colors.neutral.700') }, // 預設字體顏色
+        'h1': { fontSize: theme('fontSize.7xl') }, 
+        'h2': { fontSize: theme('fontSize.6xl') }, 
+        'h3': { fontSize: theme('fontSize.3xl') }, 
+        'h4': { fontSize: theme('fontSize.2xl') }, 
+        ':root': {
+          '--primary-400': theme('colors.primary.400'), // 定義顏色變數後可在 CSS 中使用
+          '--primary-100': theme('colors.primary.100'), 
+          '--primary-10': theme('colors.primary.10'), 
+          '--neutral-700': theme('colors.neutral.700'), 
+          '--neutral-400': theme('colors.neutral.400'), 
+          '--neutral-100': theme('colors.neutral.100'), 
+          '--neutral-50': theme('colors.neutral.50'), 
+          '--neutral-20': theme('colors.neutral.20'), 
+          '--neutral-0': theme('colors.neutral.0'), 
+        },
       });
-      
-    })
+    }),
   ],
-}
-
+};
