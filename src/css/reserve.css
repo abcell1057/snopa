@@ -1,0 +1,157 @@
+.search-area {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.result-area {
+    padding-top: 80px;
+    border-top: 1px solid var(--neutral-100);
+    min-height: 480px;
+}
+
+.result-not-found {
+   display: flex;
+   justify-content: center;
+}
+
+.result-avl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 64px;
+    padding-right: 8px; /* 避免最右邊陰影被截掉 */
+}
+
+/* coach-card */
+
+.coach-card-top {
+    position: relative;
+}
+
+.coach-card-top img,
+.coach-detail-img {
+    background-color: var(--neutral-50);
+    box-shadow: 8px 8px var(--primary-50);
+    border-radius: 8px;
+}
+
+.coach-card-desc {
+    position: absolute;
+    bottom: 24px;
+    left: 12px;
+}
+
+.coach-card-desc h4 {
+    background-color: var(--primary-50);
+    padding: 4px 12px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.coach-card-desc h4:nth-of-type(2) {
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+.coach-card-bottom {
+    display: flex;
+    align-items: end;
+    padding: 12px 20px;
+    margin-top: 12px;
+}
+
+.coach-card-bottom .caption {
+    color: var(--neutral-400);
+}
+
+/**** coach-detail page ****/
+.main-container {
+    display: flex;
+    margin-top: 120px;
+    gap: 120px;
+}
+
+.with-b-top {
+    padding-top: 80px;
+    border-top: 1px solid var(--neutral-100)
+}
+
+.coach-info {
+    padding-bottom: 80px
+}
+
+.coach-info {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-right: 8px;/* 加右側是為了把卡片右側陰影收進來 */
+    padding-bottom: 80px
+}
+
+.coach-info-detail {
+    display: flex;
+}
+
+.right-section h3 {
+    margin-bottom: 32px;
+}
+
+.item-group {
+    display: flex;
+    color: var(--neutral-400);
+    padding-bottom: 12px;
+}
+
+.item-group:first-child {
+    margin-top: 32px;
+}
+
+.list-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    width: fit-content;
+    min-width: 100px;
+    margin-right: 24px;
+}
+
+.list-item-content {
+    margin-right: 4px;
+    text-align: start;
+}
+
+.item-group ~ h3 {
+    margin-top: 48px;
+}
+
+.coach-detail-img {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* reserve */
+.reserve {
+    padding-bottom: 80px;
+    width: 67%;
+}
+
+.reserve form:first-of-type {
+    border-bottom: 1px dotted var(--neutral-100);
+    margin-bottom: 80px;
+    padding-bottom: 48px; 
+}
+
+.reserve h2 {
+    margin-bottom: 80px;
+}
+
+.reserve .form-group {
+    margin-top: 32px;
+}
+
+.reserve .btn-primary {
+    width: 100%;
+    margin-top: 80px;
+}

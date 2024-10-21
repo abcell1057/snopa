@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve</title>
+    <link rel="stylesheet" href="../src/style.css" />
+    <!-- pagedone -->
+    <link href="../src/css/pagedone.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/css/common.css" />
+    <link rel="stylesheet" href="../src/css/reserve.css" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="../src/js/reserve.js"></script>
+</head>
+
+<body>
+    <!-- Main navigation container -->
+    <nav
+        class="fixed inset-x-0 mx-auto w-11/12 max-w-screen-xl px-10 py-3 top-3 rounded-xl bg-white bg-opacity-50 backdrop-blur backdrop-saturate-150 z-[9999] lg:px-10 lg:py-3">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="mr-4 block cursor-pointer py-3 text-2xl font-semibold">
+                SNOPA
+            </a>
+            <div class="hidden lg:block">
+                <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="/dist/index.html" class="flex items-center">Home</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="/dist/course.html" class="flex items-center">Ski Courses</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="/dist/about.html" class="flex items-center">About Us</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="/dist/reserve.html" class="flex items-center">Reserve</a>
+                    </li>
+                    <li class="flex items-center px-2 py-3 gap-x-2 text-base">
+                        <a href="/dist/status.html" class="flex items-center">Snow Status</a>
+                    </li>
+                    <!-- <div
+                        class="flex items-center pl-4 ml-10 gap-4 border border-l-gray-400 border-t-0 border-b-0 border-r-0">
+                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full bg-blue-600 text-white">Zh</a>
+                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full border border-blue-600">En</a>
+                    </div> -->
+                </ul>
+            </div>
+            <button
+                class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+                type="button">
+                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <section>
+        <div class="hero px-30 pt-64 pb-40 bg-neutral-50">
+            <h1 class="font-semibold">Reserve</h1>
+            <h4 class="mt-12">Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas
+                platonem </h4>
+        </div>
+    </section>
+    <!-- Breadcrum -->
+    <section>
+        <div class="px-30 py-40">
+            <ul class="breadcrumb">
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Coach Information</a></li>
+            </ul>
+            <div class="main-container">
+                <div class="left-section with-b-top">
+                    <div class="side-nav">
+                        <ul>
+                            <div class="item active">
+                                <span>Information</span>
+                                <img src="../src/img/icon_arrow_right.svg"></img>
+                            </div>
+                            <div class="item">
+                                <span>Reserve</span>
+                                <img src="../src/img/icon_arrow_right.svg"></img>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="coach-info with-b-top">
+                        <h2 class="font-semibold">Information</h2>
+                        <div class="coach-info-detail">
+                            <div class="detail-list">
+                                <h3 class="font-semibold">Support</h3>
+                                <div class="item-group">
+                                    <div class="list-item-title">教學地區</div>
+                                    <div class="list-item-content">白馬</div>
+                                </div>
+                                <div class="item-group">
+                                    <div class="list-item-title">教學語言</div>
+                                    <div class="list-item-content">中文 (普通話)</div>
+                                    <div class="list-item-content">/ 日文</div>
+                                </div>
+                                <div class="item-group">
+                                    <div class="list-item-title">教學年齡範圍</div>
+                                    <div class="list-item-content">單板 Snowboard: 至少 7 歲</div>
+                                </div>
+                                <div class="item-group">
+                                    <div class="list-item-title">單板</div>
+                                    <div class="list-item-content">無經驗</div>
+                                    <div class="list-item-content">/ 初階至高階</div>
+                                    <div class="list-item-content">/ 平花</div>
+                                    <div class="list-item-content">/ 跳台</div>
+                                    <div class="list-item-content">/ 公園</div>
+                                </div>
+                                <div class="item-group">
+                                    <div class="list-item-title">雙板</div>
+                                    <div class="list-item-content">無經驗</div>
+                                    <div class="list-item-content">/ 初階至高階</div>
+                                </div>
+                                <h3 class="font-semibold">License</h3>
+                                <div class="flex flex-wrap text-neutral-400">
+                                    <div class="list-item-content">單板 Snowboard: CASI Level 2</div>
+                                    <div class="list-item-content">/ 單板 Snowboard: CASI Level 2</div>
+                                    <div class="list-item-content">/ 單板 Snowboard: CASI Level 2</div>
+                                </div>
+                            </div>
+                            <div class="coach-detail-img">
+                                <img src="../src/img/img_coach.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="intro">
+                            <h3 class="font-semibold">Intrduce</h3>
+                            <div class="item-group">
+                            <p>Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei.
+                                Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei. efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus nam ei.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reserve with-b-top">
+                        <h2 class="font-semibold">預約課程</h2>
+                        <form action="">
+                            <div class="title-wrap">
+                                <h3 class="font-semibold text-primary-400">單板教練｜Furano 富良野滑雪場教練</h3>
+                                <p class="text-neutral-400">TTG senior management will work with you to identify how TT Global’s capabilities.TTG senior management will work with you to identify how TT Global’s capabilities.</p>
+                            </div> 
+                            <!-- tab-group -->
+                            <div class="flex flex-col gap-4 mb-10"> 
+                                <div class="flex w-fit bg-neutral-50 p-3 rounded-lg">
+                                    <ul class="flex flex-wrap transition-all duration-300 overflow-hidden">
+                                        <h4 href="javascript:void(0)" class="tablink text-base" data-tab="tabs-with-rounded-1">全日 6 小時</h4>
+                                        <h4 href="javascript:void(0)" class="tablink text-base" data-tab="tabs-with-rounded-2">半日 3 小時</h4>
+                                    </ul>
+                                </div>
+                                <p class="caption text-neutral-400">*若不確定可以使用全日時數預約課程</p>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">雪場</span>
+                                </label>
+                                <select name="park" id="park-select">
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="d">D</option>
+                                    <option value="c">C</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">起始日</span>
+                                </label>
+                                <input type="date" name="" tabindex="0" required />
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">結束日</span>
+                                </label>
+                                <input type="date" name="" tabindex="0" required />
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">人數</span>
+                                </label>
+                                <input type="text" name="" placeholder="Enter" tabindex="0" required />
+                            </div> 
+                            <div class="w-full flex mt-20">
+                                <h3 class="font-semibold mr-auto">預計費用</h3>
+                                <h3 class="text-neutral-400">NTD$ 3,305</h3>
+                            </div>
+                        </form>
+                        <form>   
+                            <div class="mt-16 title-wrap">
+                                <h3 class="font-semibold">學員資訊</h3>
+                                <p class="text-neutral-400">TTG senior management will work with you to identify how TT Global’s capabilities.TTG senior management will work with you to identify how TT Global’s capabilities.</p>
+                            </div>  
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">姓名</span>
+                                </label>
+                                <input type="text" name="" tabindex="0" required />
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">信箱</span>
+                                </label>
+                                <input type="text" name="" tabindex="0" required />
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <span class="required">滑行經驗 (可複選，建議程度相當的夥伴一起上課)</span>
+                                </label>
+                            </div>    
+                            <div class="form-group">
+                                <label class="form-check">無經驗
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="form-check">初階，開始練習轉彎
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="form-check">綠線，連續轉彎
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="form-check">紅線，連續轉彎
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="form-check">黑線，連續轉彎
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <button class="btn btn-primary self-center">送出預約</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Notice -->
+            <div class="notice-wrap">
+                <h3 class="font-semibold text-neutral-400 pb-4">Notice</h3>
+                <p class="text-neutral-400">
+                    Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos.
+                    Mazim nemore singulis an ius, nullam ornatus nam ei.Quidam officiis similique sea ei, vel tollit
+                    indoctum efficiendi ei, at nihil tantas platonem eos. Mazim nemore singulis an ius, nullam ornatus
+                    nam ei.Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem
+                    eos. Mazim nemore singulis an ius, nullam ornatus nam ei.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <section>
+        <div class="footer flex py-20 px-30 bg-neutral-700 align-bottom">
+            <div class="w-3/12">
+                <img class="logo-mark w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
+                <p class="caption text-neutral-100">+1 (232) 576-98-07</p>
+                <p class="mt-3 caption text-neutral-100">3 Chome-16-3 Otemachi, Maebashi, Gunma 371-0026, Japan</p>
+            </div>
+            <div class="ml-auto mt-auto">
+                <ul class="flex gap-4 flex-wrap text-neutral-0">
+                    <li class="menu-item"><a>Home</a></li>
+                    <li class="menu-item"><a>Ski Courses</a></li>
+                    <li class="menu-item"><a>About Us</a></li>
+                    <li class="menu-item"><a>Reserve</a></li>
+                    <li class="menu-item"><a></a>Snow Status</li>
+                </ul>
+                <span class="block caption pt-4 text-end text-neutral-100">© Copyright 2024. SNOPA. All Right Reserved.</span>
+            </div>
+        </div>
+    </section>

@@ -8,27 +8,22 @@
     position: relative;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    background-color: var(--neutral-100);
-    width: 1px;
-    height: 100%;
-    left: 8px;
-    top: 16px;
-    padding-bottom: 32px;
-}
-
 .timeline-item {
     display: flex;
-    gap: 32px;
-    padding-left: 80px;
-    margin-bottom: 48px;
+    padding: 0 0 72px 72px;
     position: relative;
+    border-left: 1px solid var(--neutral-100);
+    gap: 32px;
+}
+
+/* h3 line-height 改寫 mb 讓線不會向上凸出 */
+.timeline-item h3 {
+    line-height: 0; 
+    margin-bottom: 12px;
 }
 
 .timeline-item:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .timeline-item::before {
@@ -38,6 +33,29 @@
     background-color: var(--primary-400);
     width: 16px;
     height: 16px;
-    left: 0;
-    top: 16px;
+    left: -8px;
+    top: -8px;
 }   
+
+.value-card {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid var(--neutral-100);
+}
+
+.value-card-content {
+    margin-top: 80px;
+    width: 40%;
+}
+
+.value-card .logo-mark {
+    width: 48px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.value-card .value-card-img {
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+}

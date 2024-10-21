@@ -27,6 +27,7 @@ module.exports = {
       padding: {
         "12": "48px",
         "18": "72px",
+        "20": "80px",
         "25": "100px",
         "30": "120px",
         "50": "200px",
@@ -59,7 +60,7 @@ module.exports = {
         ':root': {
           '--primary-400': theme('colors.primary.400'), // 定義顏色變數後可在 CSS 中使用
           '--primary-100': theme('colors.primary.100'), 
-          '--primary-10': theme('colors.primary.10'), 
+          '--primary-50': theme('colors.primary.50'), 
           '--neutral-700': theme('colors.neutral.700'), 
           '--neutral-400': theme('colors.neutral.400'), 
           '--neutral-100': theme('colors.neutral.100'), 

@@ -2,6 +2,27 @@
     opacity: 20%;
 }
 
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 60px;
+    left: 0;
+}
+
+svg {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+svg rect {
+    fill: white;
+    mask: url(#mask);
+}
+
+/* special */
+
 .card-special {
     display: flex;
     flex-direction: column;
