@@ -541,12 +541,12 @@ form {
         display: block;
     }
 
-    li {
+    .navlist li {
         justify-content: center;
         border-bottom: 1px dotted var(--neutral-400);
     }
 
-    li:last-of-type{
+    .navlist li:last-of-type{
         border-bottom: none;
     }
 
@@ -577,6 +577,10 @@ form {
 
     .footer .footer-right span {
       text-align: left;  
+    }
+
+    .footer .menu-item {
+        padding: 8px 0;
     }
 }
 
