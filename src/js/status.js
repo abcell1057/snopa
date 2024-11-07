@@ -183,7 +183,7 @@ $(document).on('click', function(event) {
 function getWeatherStatus(lat, lon) {
     $.ajax({
         // 目前天氣：調用 目前數據
-        url: `http://api.openweathermap.org/data/2.5/weather?lang=zh_tw&units=metric&lat=`+lat+`&lon=`+lon+`&&appid=57cf5d8741fce7a9293dc094e0ff2e10`,
+        url: `https://api.openweathermap.org/data/2.5/weather?lang=zh_tw&units=metric&lat=`+lat+`&lon=`+lon+`&&appid=57cf5d8741fce7a9293dc094e0ff2e10`,
         success: function (data) {
             let icon = data.weather[0].icon
             let iconurl = `https://openweathermap.org/img/wn/` + icon + `@2x.png`
@@ -204,7 +204,7 @@ function getWeatherStatus(lat, lon) {
 function getSnowCover(lat, lon) {
     $.ajax({
         // 積雪量：調用未來 5 天 / 3 小時預測數據
-        url: `http://api.openweathermap.org/data/2.5/forecast?lang=zh_tw&units=metric&lat=`+lat+`&lon=`+lon+`&&appid=57cf5d8741fce7a9293dc094e0ff2e10`,
+        url: `https://api.openweathermap.org/data/2.5/forecast?lang=zh_tw&units=metric&lat=`+lat+`&lon=`+lon+`&&appid=57cf5d8741fce7a9293dc094e0ff2e10`,
         success: function (data) {
             let weather3h = data.list[0].weather[0].main;
 
