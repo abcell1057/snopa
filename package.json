@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "pagedone": "^1.2.2"
   }

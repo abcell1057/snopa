@@ -1,0 +1,306 @@
+.position-area {
+    position: relative;
+    max-width: 1200px;
+    height: 1000px;
+    margin: auto;
+}
+
+.map-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--neutral-0);
+    width: 1200px;
+    height: 1000px;
+    z-index: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.map-jp {
+    width: 1000px;
+    margin: auto;
+}
+
+/* 地圖按鈕 */
+.btn-map {
+    min-width: 120px;
+    height: 48px;
+    color: var(--neutral-400);
+    background-color: var(--neutral-20);
+    border: 2px solid var(--primary-100);
+    border-radius: 100px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.btn-map:hover {
+    color: var(--neutral-700);
+}
+
+.btn-map:hover + .map-pin {
+    filter: none;
+}
+
+/* 地圖pin */
+.map-pin {
+    position: absolute; 
+    width: 24px;
+    height: 24px;
+    filter: saturate(19%);
+    transform-origin: bottom;
+    transition: all 0.4s ease;
+}
+
+/* 地圖 pin 點擊放大 */
+.scaled {
+    transform: scale(2);
+    transition: transform 0.4s ease-out;
+}
+
+.nofilter {
+    filter: none;
+}
+
+/* 按鈕與錨點定位 */
+#galaButton { left: 560px; top: 450px; }
+#galaPin { left: 670px; top: 525px }
+
+#naebaButton { left: 490px; top: 520px;}
+#naebaPin { left: 657px; top: 560px;}
+
+#karuzawaButton { left: 640px; top: 630px; }
+#karuzawaPin { left: 620px; top: 600px; }
+
+#nisekoButton { left: 690px; top: 110px; }
+#nisekoPin { left: 830px; top: 170px; }
+
+#tamamuButton { left: 970px; top: 100px; }
+#tamamuPin { left: 930px; top: 150px; }
+
+#rusutsuButton { left: 860px; top: 240px; }
+#rusutsuPin { left: 860px; top: 180px; }
+
+/* 天氣卡片 */
+.weather-card {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    padding: 24px 20px;
+    background-color: var(--neutral-50);
+    box-shadow: 8px 8px var(--primary-50);
+    border-radius: 8px;
+    width: 400px;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: auto; 
+    margin-bottom: 16px;
+    border-radius: 8px;
+    background-color: var(--primary-100);
+    box-shadow: 4px 4px var(--primary-50);
+}
+
+.item-group {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+/**** RWD ****/
+@media (max-width: 1280px) {
+    .position-area {
+        max-width: 1024px;
+    }
+    .map-content {
+        width: 984px;
+        height: 820px;
+    }
+
+    .weather-card {
+        width: 320px;
+        top: 120px;
+        left: 60px;
+    }
+
+    .map-jp {
+        width: 800px;
+    }
+
+    /* 按鈕與錨點定位 */
+    #galaButton { left: 560px; top: 340px; }
+    #galaPin { left: 560px; top: 415px }
+
+    #naebaButton { left: 400px; top: 380px;}
+    #naebaPin { left: 540px; top: 435px;}
+
+    #karuzawaButton { left: 550px; top: 480px; }
+    #karuzawaPin { left: 510px; top: 460px; }
+
+    #nisekoButton { left: 530px; top: 90px; }
+    #nisekoPin { left: 670px; top: 124px; }
+
+    #tamamuButton { left: 770px; top: 50px; }
+    #tamamuPin { left: 746px; top: 130px; }
+
+    #rusutsuButton { left: 560px; top: 160px; }
+    #rusutsuPin { left: 690px; top: 140px; }
+
+}
+
+@media (max-width: 1024px) {    
+    .position-area {
+        height: auto;
+        padding: 40px 24px;
+        display: block; 
+    }
+
+    .map-content {
+        position: static;
+        width: 100%;
+        height: fit-content;
+        transform: none;
+        padding: 40px 0;
+    }
+
+    .map-jp {
+        width: calc(100% - 40px);
+    }
+
+    .weather-card {
+        position: static;
+        width: calc(100% - 8px);
+        margin-bottom: 24px;
+    }
+
+    .btn-map {
+        min-width: 60px;
+        height: 32px;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 4px 12px;
+        text-align: center;
+    }
+
+    .rwd-content {
+        position: relative;
+    }
+
+    /* 按鈕與錨點定位 */
+    #galaButton { left: 50%; top: 50%; transform: translate(-50%, 540%); }
+    #galaPin { left: 50%; top: 50%; transform: translate(260%, 1030%); }
+
+    #naebaButton { left: 50%; top: 50%; transform: translate(-150%, 700%); }
+    #naebaPin { left: 50%; top: 50%; transform: translate(190%, 1120%); }
+
+    #karuzawaButton { left: 50%; top: 50%; transform: translate(50%, 1000%); }
+    #karuzawaPin { left: 50%; top: 50%; transform: translate(70%, 1250%); }
+
+    #nisekoButton { left: 50%; top: 50%; transform: translate(120%, -710%); }
+    #nisekoPin { left: 50%; top: 50%; transform: translate(660%, -850%); }
+
+    #tamamuButton { left: 50%; top: 50%;  }
+    #tamamuPin { left: 50%; top: 50%; transform: translate(1280%, -350%); }
+
+    #rusutsuButton { left: 50%; top: 50%; transform: translate(240%, -150%); }
+    #rusutsuPin {left: 50%; top: 50%; transform: translate(990%, -280%); }
+}
+
+@media (max-width: 780px) {
+    #galaButton { left: 50%; top: 50%; transform: translate(-50%, 90%); }
+    #galaPin { left: 50%; top: 50%; transform: translate(60%, 270%); }
+
+    #naebaButton { left: 50%; top: 50%; transform: translate(-150%, 200%); }
+    #naebaPin { left: 50%; top: 50%; transform: translate(10%, 360%); }
+
+    #karuzawaButton { left: 50%; top: 50%; transform: translate(50%, 500%); }
+    #karuzawaPin { left: 50%; top: 50%; transform: translate(-100%, 420%); }
+
+    #nisekoButton { left: 45vw; top: 80vh; }
+    #nisekoPin { left: 46vw; top: 82vh; }
+
+    #tamamuButton { left: 72vw; top: 10vh; }
+    #tamamuPin { left: 34vw; top: 50vh; }
+
+    #rusutsuButton { left: 37vw; top: 44vh; }
+    #rusutsuPin { left: 37vw; top: 50vh;}
+}
+
+@media (max-width: 640px) {
+    #galaButton { left: 50%; top: 50%; transform: translate(-50%, -40%); }
+    #galaPin { left: 50%; top: 50%; transform: translate(60%, 150%); }
+
+    #naebaButton { left: 50%; top: 50%; transform: translate(-150%, 100%); }
+    #naebaPin { left: 50%; top: 50%; transform: translate(10%, 240%); }
+
+    #karuzawaButton { left: 50%; top: 50%; transform: translate(-70%, 350%); }
+    #karuzawaPin { left: 50%; top: 50%; transform: translate(-100%, 300%); }
+
+    #nisekoButton { left: 40vw; top: 75vh; }
+    #nisekoPin { left: 40vw; top: 75vh; }
+
+    #tamamuButton { left: 67vw; top: 5vh; }
+    #tamamuPin { left: 27vw; top: 43vh; }
+
+    #rusutsuButton { left: 32vw; top: 40vh; }
+    #rusutsuPin { left: 31vw; top: 41vh;}
+}
+
+@media (max-width: 440px) {
+    .map-jp {
+        width: 327px;
+    }
+
+    #galaButton { left: 160px; top: 130px; }
+    #galaPin { left: 160px; top: 120px; }
+
+    #naebaButton { left: 160px; top: 130px;}
+    #naebaPin { left: 160px; top: 114px; }
+
+    #karuzawaButton { left: 160px; top: 130px; }
+    #karuzawaPin { left: 168px; top: 120px; }
+
+    #nisekoButton { left: 70px; top: 250px; }
+    #nisekoPin { left: 72px; top: 243px; }
+
+    #tamamuButton { left: 180px; top: -10px; }
+    #tamamuPin { left: -46px; top: 120px; }
+
+    #rusutsuButton { left: 70px; top: 130px; }
+    #rusutsuPin { left: 3px; top: 113px; }
+
+}
+
+@media (max-width: 374px) {
+    .map-jp {
+        width: 296px;
+    }
+
+    #galaButton { left: 120px; top: 100px; }
+    #galaPin { left: 150px; top: 80px; }
+
+    #naebaButton { left: 150px; top: 90px;}
+    #naebaPin { left: 147px; top: 82px; }
+
+    #karuzawaButton { left: 150px; top: 70px; }
+    #karuzawaPin { left: 158px; top: 80px; }
+
+    #nisekoButton { left: 40px; top: 250px; }
+    #nisekoPin { left: 32px; top: 228px; }
+
+    #tamamuButton { left: 160px; top: -10px; }
+    #tamamuPin { left: -88px; top: 110px; }
+
+    #rusutsuButton { left: 30px; top: 120px; }
+    #rusutsuPin { left: -40px; top: 98px; }
+
+}

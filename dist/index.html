@@ -14,18 +14,18 @@
     <!-- jQuery -->
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../src/js/pagedone.min.js"></script>
+    <script src="../src/js/common.js"></script>
     <script src="../src/js/index.js"></script>
 </head>
 
 <body>
-    <!-- Main navigation container -->
-    <nav
-        class="fixed inset-x-0 mx-auto w-11/12 max-w-screen-xl px-10 py-3 top-3 rounded-xl bg-white bg-opacity-50 backdrop-blur backdrop-saturate-150 z-[9999] lg:px-10 lg:py-3">
+    <!-- Navigation container -->
+    <nav class="nav-bar ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="mr-4 block cursor-pointer py-3 text-2xl font-semibold">
                 SNOPA
             </a>
-            <div class="hidden lg:block">
+            <div class="navlist hidden lg:block">
                 <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/index.html" class="flex items-center">Home</a>
@@ -42,39 +42,30 @@
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/status.html" class="flex items-center">Snow Status</a>
                     </li>
-                    <!-- <div
-                        class="flex items-center pl-4 ml-10 gap-4 border border-l-gray-400 border-t-0 border-b-0 border-r-0">
-                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full bg-blue-600 text-white">Zh</a>
-                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full border border-blue-600">En</a>
-                    </div> -->
                 </ul>
             </div>
-            <button
-                class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-                type="button">
-                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </span>
+            <!-- <button class="hamburger relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden" type="button"> -->
+            <button class="hamburger" type="button">
+                <a class="ham-border ham-border-1"></a>
+                <a class="ham-border ham-border-2"></a>
+                <a class="ham-border ham-border-3"></a>
             </button>
         </div>
     </nav>
     <!-- Hero -->
     <section>
-        <div class="hero container flex inset-x-0 mx-auto relative pt-24 px-30 min-h-768-px h-screen">
-            <img class="hero-logo-mark absolute top-35 left-24 w-680-px -z-10 sm:mt-0" src="../src/img/img_logo_logomark.svg"
+        <div class="hero index-hero">
+            <img class="hero-logo-mark" src="../src/img/img_logo_logomark.svg"
                 alt="..." />
-            <div class="w-full flex ml-auto justify-end items-center">
-                <div class="max-w-660-px md:w-8/12 lg:w-3/4">
+            <div class="slogan-section">
+                <div class="text-wrap">
                     <div class="pt-32 sm:pt-0">
                         <h1
                             class="font-semibold leading-tight text-transparent">
                             Embrace the Snow Enjoy the Journey
                         </h1>
                         <h4 class="mt-6 text-neutral-400">
-                            Professional ski coaching, from basics to freedom
+                            從基礎練習，到自由徜徉滑雪樂趣
                         </h4>
                     </div>
                 </div>
@@ -83,14 +74,14 @@
     </section>
     <!-- Special -->
     <section>
-        <div class="mx-auto pt-20 pb-40 px-30">
+        <div class="m-container flex-col">
             <div class="title-wrap flex flex-col gap-10">
-                <h2 class="font-semibold">Special</h2>
+                <h2 class="font-semibold">課程專屬</h2>
                 <h3 class="">
                     SNOPA 致力於在安全的前提下，支持不同的滑雪者體驗此項活動，在大自然的陪伴中獲得更多樂趣與成就
                 </h3>
             </div>
-            <div class="grid grid-cols-3 gap-10">
+            <div class="cards-group">
                 <div class="card card-special">
                     <img src="../src/img/img_special_team.svg">
                     <h4>專業證照教練團隊</h4>
@@ -119,79 +110,81 @@
     </section>
     <!-- Service -->
     <section>
-        <div class="py-50 pl-30 bg-neutral-50">
-            <div class="title-wrap flex gap-40 pr-30">
-                <h2 class="font-semibold">Service</h2>
+        <div class="servie bg-neutral-50">
+            <div class="title-wrap">
+                <h2 class="font-semibold">服務</h2>
                 <h3 class="">
                     SNOPA
                     提供多樣化的服務，無論學員是初學者還是進階滑雪者，希望都能找到適合的課程，和我們一起體驗滑雪樂趣
                 </h3>
             </div>
-            <div class="pt-20 flex gap-16 overflow-hidden">
-                <div class="card-service">
-                    <div class="card-service-content">
-                        <div class="order-wrap">
-                            <span class="order">(01)</span>
+            <div class="sticky-section">
+                <div class="card-group-service">
+                    <div class="card-service">
+                        <div class="card-service-content">
+                            <div class="order-wrap">
+                                <span class="order">(01)</span>
+                            </div>
+                            <div class="flex pb-18">
+                                <h3>課前諮詢服務</h3>
+                                <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                            </div>
+                            <p>
+                                提供專業諮詢，根據學員的滑雪目標、能力和預算，推薦最適合的課程或裝備。無論是新手還是有經驗者，我們的教練團隊都會確保學員在開始前做好充分準備。
+                            </p>
                         </div>
-                        <div class="flex pb-18">
-                            <h3>課前諮詢服務</h3>
-                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
-                        </div>
-                        <p>
-                            提供專業諮詢，根據學員的滑雪目標、能力和預算，推薦最適合的課程或裝備。無論是新手還是有經驗者，我們的教練團隊都會確保學員在開始前做好充分準備。
-                        </p>
+                        <img src="../src/img/img_service_consult.png">
                     </div>
-                    <img src="../src/img/img_service_consult.png">
+                    <div class="card-service">
+                        <div class="card-service-content">
+                            <div class="order-wrap">
+                                <span class="order">(02)</span>
+                            </div>
+                            <div class="flex pb-18">
+                                <h3>團體與個人課程選擇</h3>
+                                <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                            </div>
+                            <p>
+                                學員可根據自身需求選擇團體課或個人一對一指導，彈性選擇多人互動學習或專屬指導，確保每位學員都能在自在的環境學習。
+                            </p>
+                        </div>
+                        <img src="../src/img/img_service_group.png">
+                    </div>
+                    <div class="card-service">
+                        <div class="card-service-content">
+                            <div class="order-wrap">
+                                <span class="order">(03)</span>
+                            </div>
+                            <div class="flex pb-18">
+                                <h3>親子滑雪體驗營</h3>
+                                <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                            </div>
+                            <p>
+                                專為家庭設計的滑雪體驗營，讓大人與孩子在專業教練的帶領下享受滑雪樂趣，透過滑雪活動增進親子互動，並讓孩子學習基礎滑雪技巧。
+                            </p>
+                        </div>
+                        <img src="../src/img/img_service_family.png">
+                    </div> 
+                    <div class="card-service">
+                        <div class="card-service-content">
+                            <div class="order-wrap">
+                                <span class="order">(04)</span>
+                            </div>
+                            <div class="flex pb-18">
+                                <h3>滑雪教練訓練營</h3>
+                                <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
+                            </div>
+                            <p>
+                                提供滑雪教練培訓，練習考試項目、雪地安全與急救知識，協助學員取得國際教練認證，成為專業滑雪教練。
+                            </p>
+                        </div>
+                        <img src="../src/img/img_service_coach.png">
+                    </div>
                 </div>
-                <div class="card-service">
-                    <div class="card-service-content">
-                        <div class="order-wrap">
-                            <span class="order">(02)</span>
-                        </div>
-                        <div class="flex pb-18">
-                            <h3>團體與個人課程選擇</h3>
-                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
-                        </div>
-                        <p>
-                            學員可根據自身需求選擇團體課或個人一對一指導，彈性選擇多人互動學習或專屬指導，確保每位學員都能在自在的環境學習。
-                        </p>
-                    </div>
-                    <img src="../src/img/img_service_group.png">
-                </div>
-                <!-- <div class="card-service">
-                    <div class="card-service-content">
-                        <div class="order-wrap">
-                            <span class="order">(03)</span>
-                        </div>
-                        <div class="flex pb-18">
-                            <h3>親子滑雪體驗營</h3>
-                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
-                        </div>
-                        <p>
-                            專為家庭設計的滑雪體驗營，讓大人與孩子在專業教練的帶領下享受滑雪樂趣，透過滑雪活動增進親子互動，並讓孩子學習基礎滑雪技巧。
-                        </p>
-                    </div>
-                    <img src="../src/img/img_service_family.png">
-                </div> -->
-                <!-- <div class="card-service">
-                    <div class="card-service-content">
-                        <div class="order-wrap">
-                            <span class="order">(04)</span>
-                        </div>
-                        <div class="flex pb-18">
-                            <h3>滑雪教練訓練營</h3>
-                            <div class="ml-auto block border-2 border-neutral-700 w-10 h-10 rounded-full"></div>
-                        </div>
-                        <p>
-                            提供滑雪教練培訓，練習考試項目、雪地安全與急救知識，協助學員取得國際教練認證，成為專業滑雪教練。
-                        </p>
-                    </div>
-                    <img src="../src/img/img_service_coach.png">
-                </div> -->
             </div>
         </div>
     </section>
-    <!-- Testimonial -->
+    <!-- Testimonial 
     <section>
         <div class="container flex inset-x-0 mx-auto w-full relative pt-30 pb-40">
             <div class="swiper default-carousel swiper-container">
@@ -328,14 +321,14 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- FAQs -->
     <section>
-        <div class="w-full px-30 py-40 bg-neutral-20">
+        <div class="m-container bg-neutral-20">
             <div class="title-wrap flex flex-col gap-10">
                 <h2 class="font-semibold">FAQs</h2>
                 <h3>
-                    TTG senior management will work with you to identify how TT Global’s capabilities.
+                    關於滑雪的任何問題，都歡迎另外預約們聯繫資訊
                 </h3>
             </div>
             <div class="accordion-group" data-accordion="default-accordion">
@@ -389,24 +382,32 @@
     </section>
     <!-- Footer -->
     <section>
-        <div class="footer flex py-20 px-30 bg-neutral-700 align-bottom">
-            <div class="w-3/12">
-                <img class="logo-mark w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
-                <p class="caption text-neutral-100">+1 (232) 576-98-07</p>
-                <p class="mt-3 caption text-neutral-100">3 Chome-16-3 Otemachi, Maebashi, Gunma 371-0026, Japan</p>
-            </div>
-            <div class="ml-auto mt-auto">
-                <ul class="flex gap-4 flex-wrap text-neutral-0">
+        <div class="footer">
+            <div class="rwd-mobile">
+                <ul class="gap-4 flex-wrap text-neutral-0">
                     <li class="menu-item"><a>Home</a></li>
                     <li class="menu-item"><a>Ski Courses</a></li>
                     <li class="menu-item"><a>About Us</a></li>
                     <li class="menu-item"><a>Reserve</a></li>
-                    <li class="menu-item"><a></a>Snow Status</li>
+                    <li class="menu-item"><a>Snow Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-left">
+                <img class="logo-mark w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
+                <p class="caption text-neutral-100">+1 (232) 576-98-07</p>
+                <p class="mt-3 caption text-neutral-100">371-0022 群馬県前橋市千代田町 1 丁目 13-17</p>
+            </div>
+            <div class="footer-right">
+                <ul class="rwd-desktop flex gap-4 flex-wrap text-neutral-0">
+                    <li class="menu-item"><a href="/dist/index.html">Home</a></li>
+                    <li class="menu-item"><a href="/dist/course.html">Ski Courses</a></li>
+                    <li class="menu-item"><a href="/dist/about.html">About Us</a></li>
+                    <li class="menu-item"><a href="/dist/reserve.html">Reserve</a></li>
+                    <li class="menu-item"><a href="/dist/status.html">Snow Status</a></li>
                 </ul>
                 <span class="block caption pt-4 text-end text-neutral-100">© Copyright 2024. SNOPA. All Right Reserved.</span>
             </div>
         </div>
     </section>
 </body>
-
 </html>

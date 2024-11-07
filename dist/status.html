@@ -13,17 +13,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
     <!-- jQuery -->
     <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="../src/js/common.js"></script>
+    <script src="../src/js/status.js"></script>
 </head>
 
 <body>
-    <!-- Main navigation container -->
-    <nav
-        class="fixed inset-x-0 mx-auto w-11/12 max-w-screen-xl px-10 py-3 top-3 rounded-xl bg-white bg-opacity-50 backdrop-blur backdrop-saturate-150 z-[9999] lg:px-10 lg:py-3">
+    <!-- Navigation container -->
+    <nav class="nav-bar ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="mr-4 block cursor-pointer py-3 text-2xl font-semibold">
                 SNOPA
             </a>
-            <div class="hidden lg:block">
+            <div class="navlist hidden lg:block">
                 <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/index.html" class="flex items-center">Home</a>
@@ -40,66 +42,102 @@
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/status.html" class="flex items-center">Snow Status</a>
                     </li>
-                    <!-- <div
-                        class="flex items-center pl-4 ml-10 gap-4 border border-l-gray-400 border-t-0 border-b-0 border-r-0">
-                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full bg-blue-600 text-white">Zh</a>
-                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full border border-blue-600">En</a>
-                    </div> -->
                 </ul>
             </div>
-            <button
-                class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-                type="button">
-                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </span>
+            <!-- <button class="hamburger relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden" type="button"> -->
+            <button class="hamburger" type="button">
+                <a class="ham-border ham-border-1"></a>
+                <a class="ham-border ham-border-2"></a>
+                <a class="ham-border ham-border-3"></a>
             </button>
         </div>
     </nav>
     <!-- Hero -->
     <section>
-        <div class="hero px-30 pt-64 pb-40 bg-neutral-50">
-            <h1 class="font-semibold text-center">Snow Status</h1>
-            <h4 class="mt-12 text-center">Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem</h4>
+        <div class="hero m-container bg-neutral-50">
+            <h1 class="font-semibold text-center">即時雪況</h1>
+            <h4 class="mt-12 text-center">透過 Openweathermap 的天氣資訊，隨時掌握雪場動態，為滑雪之旅做好萬全準備</h4>
         </div>
     </section>
     <!-- Map -->
-     <div class="p-30 bg-neutral-20">
-        <div class="flex gap-5">
-            <btn class="btn btn-primary">GALA 湯澤</btn>
-            <btn class="btn btn-primary">岩原滑雪場</btn>
-            <btn class="btn btn-primary">神立滑雪場</btn>
-        </div>
-        <div class="flex gap-5 mt-5">
-            <btn class="btn btn-primary">安比高原滑雪場</btn>
-            <btn class="btn btn-primary">八幡平滑雪場</btn>
-            <btn class="btn btn-primary">雫石滑雪場</btn>
-        </div>
-        <div class="py-6 px-5 bg-neutral-50 rounded-lg mt-10 w-1/3">
-            <div class="detail-list">
-                <h4 class="font-semibold mb-5">GALA 湯澤</h4>
-                <div class="item-group flex">
-                    <div class="list-item-title mr-auto">積雪深度</div>
-                    <div class="list-item-content">--</div>
+    <!-- <div class="m-container bg-neutral-20 flex flex-wrap"></div> -->
+    <div class="xl:py-40 lg:py-20 sm:py-10 bg-neutral-20">
+        <div class="position-area">
+            <div id="data" class="weather-card">
+                <div class="detail-list">
+                    <div class="card-title">
+                        <h4 id="parkName" class="font-semibold mb-5">--</h4>
+                        <img id="weatherIcon" class="weather-icon" alt="">
+                    </div>
+                    
+                    <div class="item-group">
+                        <div class="list-item-title mr-auto">天氣</div>
+                        <div id="currentWeather" class="list-item-content">--</div>
+                    </div>
+                    <div class="item-group">
+                        <div class="list-item-title mr-auto">溫度</div>
+                        <div id="currentTemp" class="list-item-content">--</div>
+                    </div>
+                    <div class="item-group">
+                        <div class="list-item-title mr-auto">風速</div>
+                        <div id="currentWindSpeed" class="list-item-content">--</div>
+                    </div>
+                    <div class="item-group">
+                        <div class="list-item-title mr-auto">能見度</div>
+                        <div id="currentVisibility" class="list-item-content">--</div>
+                    </div>
+                    <div class="item-group">
+                        <div class="list-item-title mr-auto">預估 3 小時後積雪量</div>
+                        <div id="futureSnowCover" class="list-item-content">--</div>
+                    </div>
                 </div>
-                <div class="item-group flex">
-                    <div class="list-item-title mr-auto">降雪量</div>
-                    <div class="list-item-content">--</div>
-                </div>
-                <div class="item-group flex">
-                    <div class="list-item-title mr-auto">風速</div>
-                    <div class="list-item-content">--</div>
-                </div>
-                <div class="item-group flex">
-                    <div class="list-item-title mr-auto">氣溫</div>
-                    <div class="list-item-content">--</div>
+            </div>
+            <div class="map-content">
+                <div class="rwd-content">
+                    <img src="../src/img/img_map_jp.svg" alt="" class="map-jp">
+                    <btn id="galaButton" class="btn btn-map">GALA 湯澤</btn>
+                    <img id="galaPin" class="map-pin" src="../src/img/img_map_pin.svg" alt="" >
+                    <btn id="naebaButton" class="btn btn-map">苗場</btn>
+                    <img id="naebaPin" class="map-pin" src="../src/img/img_map_pin.svg" alt="" >
+                    <btn id="karuzawaButton" class="btn btn-map">輕井澤</btn>
+                    <img id="karuzawaPin" class="map-pin" src="../src/img/img_map_pin.svg" alt="" >
+                    <btn id="nisekoButton" class="btn btn-map">二世谷</btn>
+                    <img id="nisekoPin" class="map-pin" src="../src/img/img_map_pin.svg" alt="" >
+                    <btn id="tamamuButton" class="btn btn-map">星野 Tomamu</btn>
+                    <img id="tamamuPin" class="map-pin" src="../src/img/img_map_pin.svg" alt="" >
+                    <btn id="rusutsuButton" class="btn btn-map">留壽都</btn>
+                    <img id="rusutsuPin" class="map-pin" src="../src/img/img_map_pin.svg" alt="" >
                 </div>
             </div>
         </div>
-
-
-     </div>
+    </div>
+    <!-- Footer -->
+    <section>
+        <div class="footer">
+            <div class="rwd-mobile">
+                <ul class="gap-4 flex-wrap text-neutral-0">
+                    <li class="menu-item"><a>Home</a></li>
+                    <li class="menu-item"><a>Ski Courses</a></li>
+                    <li class="menu-item"><a>About Us</a></li>
+                    <li class="menu-item"><a>Reserve</a></li>
+                    <li class="menu-item"><a>Snow Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-left">
+                <img class="logo-mark w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
+                <p class="caption text-neutral-100">+1 (232) 576-98-07</p>
+                <p class="mt-3 caption text-neutral-100">371-0022 群馬県前橋市千代田町 1 丁目 13-17</p>
+            </div>
+            <div class="footer-right">
+                <ul class="rwd-desktop flex gap-4 flex-wrap text-neutral-0">
+                    <li class="menu-item"><a href="/dist/index.html">Home</a></li>
+                    <li class="menu-item"><a href="/dist/course.html">Ski Courses</a></li>
+                    <li class="menu-item"><a href="/dist/about.html">About Us</a></li>
+                    <li class="menu-item"><a href="/dist/reserve.html">Reserve</a></li>
+                    <li class="menu-item"><a href="/dist/status.html">Snow Status</a></li>
+                </ul>
+                <span class="block caption pt-4 text-end text-neutral-100">© Copyright 2024. SNOPA. All Right Reserved.</span>
+            </div>
+        </div>
+    </section>
 </body>

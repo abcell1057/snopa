@@ -31,6 +31,10 @@
     position: relative;
 }
 
+.coach-card-top img {
+    width: 100%;
+}
+
 .coach-card-top img,
 .coach-detail-img {
     background-color: var(--neutral-50);
@@ -68,9 +72,15 @@
 }
 
 /**** coach-detail page ****/
+.reserve-detail {
+    flex-direction: column;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .main-container {
     display: flex;
-    margin-top: 120px;
     gap: 120px;
 }
 
@@ -93,6 +103,13 @@
 
 .coach-info-detail {
     display: flex;
+    gap: 40px;
+}
+
+.coach-info-detail .coach-detail-img {
+    margin-left: auto;
+    height: fit-content;
+    width: fit-content;
 }
 
 .right-section h3 {
@@ -132,26 +149,154 @@
 }
 
 /* reserve */
-.reserve {
+.reserve-form {
     padding-bottom: 80px;
-    width: 67%;
+    width: 80%;
 }
 
-.reserve form:first-of-type {
+.reserve-form form:first-of-type {
     border-bottom: 1px dotted var(--neutral-100);
     margin-bottom: 80px;
     padding-bottom: 48px; 
 }
 
-.reserve h2 {
+.reserve-form h2 {
     margin-bottom: 80px;
 }
 
-.reserve .form-group {
+.reserve-form .form-group {
     margin-top: 32px;
 }
 
-.reserve .btn-primary {
+.reserve-form .btn-primary {
     width: 100%;
     margin-top: 80px;
+}
+
+.reserve-form .estimated-fee {
+    width: 100%;
+    display: flex;
+    margin-top: 80px
+}
+
+.reserve-form  input[type="textarea"] {
+    min-height: 192px;
+}
+
+/**** RWD ****/
+
+@media (min-width: 1536px) {
+    .search-area .flex .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } 
+
+    .result-avl {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1280px) {
+    .result-avl {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-area .flex .grid {
+        grid-template-columns: 1fr 1fr;
+    } 
+    
+    .result-avl {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-area {
+        gap: 60px;
+    }
+
+    .result-area {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 640px) {
+    .search-area .flex .grid {
+        grid-template-columns: 1fr;
+    } 
+
+    .result-avl {
+        grid-template-columns: 1fr;
+    }
+
+    .search-area {
+        gap: 40px;
+    }
+
+    .result-area {
+        padding-top: 40px;
+    }
+
+    .with-b-top {
+        padding-top: 40px;
+    }
+}
+
+/**** RWD ****/
+/**** coach-detail page ****/
+
+@media (max-width: 1280px) {
+    .coach-info-detail {
+        flex-direction: column-reverse;
+    }
+
+    .coach-info-detail .coach-detail-img {
+        margin-left: 0;
+        width: fit-content;
+    }
+
+    .main-container {
+        gap: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .reserve-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .main-container {
+        gap: 40px;
+    }
+
+    .coach-info {
+        padding-bottom: 40px;
+    }
+
+    .reserve-form {
+        padding-bottom: 24px;
+    }
+
+    .reserve-form h2 {
+        margin-bottom: 40px;
+    }
+
+    .reserve-form .btn-primary {
+        margin-top: 40px;
+    }
+
+    .reserve-form form:first-of-type {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .reserve-form .estimated-fee {
+        margin-top: 40px;
+        padding-right: 8px;
+    }
 }

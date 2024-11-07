@@ -15,18 +15,18 @@
     <!-- jQuery -->
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../src/js/pagedone.min.js"></script>
+    <script src="../src/js/common.js"></script>
     <script src="../src/js/about.js"></script>
 </head>
 
 <body>
-    <!-- Main navigation container -->
-    <nav
-        class="fixed inset-x-0 mx-auto w-11/12 max-w-screen-xl px-10 py-3 top-3 rounded-xl bg-white bg-opacity-50 backdrop-blur backdrop-saturate-150 z-[9999] lg:px-10 lg:py-3">
+    <!-- Navigation container -->
+    <nav class="nav-bar ">
         <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="#" class="mr-4 block cursor-pointer py-3 text-2xl font-semibold">
                 SNOPA
             </a>
-            <div class="hidden lg:block">
+            <div class="navlist hidden lg:block">
                 <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/index.html" class="flex items-center">Home</a>
@@ -35,7 +35,7 @@
                         <a href="/dist/course.html" class="flex items-center">Ski Courses</a>
                     </li>
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
-                        <a href="/dist/about.html" class="flex items-center">About Us</a>
+                        <a href="dist/about.html" class="flex items-center">About Us</a>
                     </li>
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/reserve.html" class="flex items-center">Reserve</a>
@@ -43,44 +43,35 @@
                     <li class="flex items-center px-2 py-3 gap-x-2 text-base">
                         <a href="/dist/status.html" class="flex items-center">Snow Status</a>
                     </li>
-                    <!-- <div
-                        class="flex items-center pl-4 ml-10 gap-4 border border-l-gray-400 border-t-0 border-b-0 border-r-0">
-                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full bg-blue-600 text-white">Zh</a>
-                        <a href="#" class="flex items-center w-9 h-9 p-2 rounded-full border border-blue-600">En</a>
-                    </div> -->
                 </ul>
             </div>
-            <button
-                class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
-                type="button">
-                <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </span>
+            <!-- <button class="hamburger relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden" type="button"> -->
+            <button class="hamburger" type="button">
+                <a class="ham-border ham-border-1"></a>
+                <a class="ham-border ham-border-2"></a>
+                <a class="ham-border ham-border-3"></a>
             </button>
         </div>
     </nav>
     <!-- Hero -->
     <section>
-        <div class="hero px-30 pt-64 pb-40">
+        <div class="hero">
             <div class="side-nav">
                 <ul>
                     <div class="item active">
-                        <span>Founder's Message</span>
+                        <a href="#message">Founder's Message</a>
                         <img src="../src/img/icon_arrow_right.svg"></img>
                     </div>
                     <div class="item">
-                        <span>Historye</span>
+                        <a href="#history">History</a>
                         <img src="../src/img/icon_arrow_right.svg"></img>
                     </div>
                     <div class="item">
-                        <span>Our Value</span>
+                        <a href="#value">Our Value</a>
                         <img src="../src/img/icon_arrow_right.svg"></img>
                     </div>
                     <div class="item">
-                        <span>Contact Us</span>
+                        <a href="#contact">Contact Us</a>
                         <img src="../src/img/icon_arrow_right.svg"></img>
                     </div>
                 </ul>
@@ -93,18 +84,17 @@
     </section>
     <!-- Founder's Message -->
     <section>
-        <div class="py-40 px-30 bg-neutral-50">
-            <div class="flex gap-40">
+        <div id="message" class="m-container bg-neutral-50">
+            <div class="founder">
                 <h2 class="font-semibold">Founder's Message</h2>
-                <div class="flex flex-col gap-10">
-                    <h3 class="fon">“擁抱雪地的每一次挑戰、享受每一次滑行”</h3>
+                <div class="f-message">
+                    <h3 class="font-semibold">“擁抱雪地的每一次挑戰、享受每一次滑行”</h3>
                     <p class="text-neutral-400">Embrace the Snow, Enjoy the Journey——這不僅是我們的口號，更是我們對每一位滑雪學員的承諾。希望您也能在這條道路上，享受每一段雪地旅程、享受最純粹的滑雪樂趣。</p>
                     <p class="text-neutral-400">我們深知滑雪不僅僅是一項運動，更是一段與大自然共舞的旅程，無論您是剛開始學習的滑雪新手，或是已經準備迎接更高挑戰的滑雪老手，我們都會陪伴您一起探索豐富的雪中世界，並在每一次滑行找到屬於自己的自由與成就感。</p>
                     <div class="flex justify-end align-sub">
-                        <span class="my-auto mr-3">--</span>
-                        <h3 class="text-neutral-400">Shuntarō Tanikawa</h3>
+                        <img class="w-1/2" src="../src/img/img_founder_signature.png" alt="">
                     </div>
-                    <div class="flex justify-between items-center pt-30 gap-10">
+                    <div class="f-detail">
                         <ul class="text-neutral-400">
                             <h4 class="mb-4 font-semibold text-neutral-700">Shuntarō Tanikawa</h4>
                             <li>美國 PSIA Level 3 單板教練認證</li>
@@ -120,8 +110,8 @@
     </section>
     <!-- History -->
     <section>
-        <div class="py-40 px-30">
-            <div class="flex gap-40">
+        <div id="history" class="m-container">
+            <div class="history">
                 <h2 class="font-semibold">History</h2>
                 <div class="">
                     <h3>TTG senior management will work with you to identify how TT Global’s capabilities.</h3>
@@ -155,7 +145,7 @@
     </section>
     <!-- Our Value -->
     <section>
-        <div class="py-40 px-30 flex flex-col gap-20 bg-neutral-50">
+        <div id="value" class="m-container flex-col gap-20 bg-neutral-50">
             <div class="title-wrap">
                 <h2 class="font-semibold mb-10">Our Value</h2>
                 <h3>SNOPA 將滑雪視為一種與自然和自我連結的過程。我們鼓勵學員在雪地中發現內在的平衡與穩定，學會與身心和諧共處。透過多元文化的交流與包容，SNOPA 創造了一個豐富而開放的環境，讓每位學員都能找到屬於自己的成長與樂趣。</h3>
@@ -171,16 +161,16 @@
             <div class="value-card">
                 <div class="value-card-content">
                 <img class="logo-mark" src="../src/img/img_logo_logomark.svg" alt="">
-                <h3 class="font-semibold mb-3">擁抱自然</h3>
-                <p>滑行時，學員不僅感受到雪地的純粹，更透過與速度和動作的同步，深入了解自己的身心極限。過程中學會與自己的身體相處，體驗滑行中與自我協調的過程，找到自己的平衡與穩定。</p>
+                <h3 class="font-semibold mb-3">漸進學習</h3>
+                <p>每一次滑雪都是一次挑戰，但也是一次自我成長的機會。我們相信，透過漸進式的學習模式，學員能夠不斷積累，並挑戰自我，獲得屬於自己的成就感。</p>
                 </div>
                 <img class="value-card-img" src="../src/img/img_value_challenge.png" alt="">
             </div>
             <div class="value-card">
                 <div class="value-card-content">
                 <img class="logo-mark" src="../src/img/img_logo_logomark.svg" alt="">
-                <h3 class="font-semibold mb-3">擁抱自然</h3>
-                <p>滑行時，學員不僅感受到雪地的純粹，更透過與速度和動作的同步，深入了解自己的身心極限。過程中學會與自己的身體相處，體驗滑行中與自我協調的過程，找到自己的平衡與穩定。</p>
+                <h3 class="font-semibold mb-3">多元文化</h3>
+                <p>SNOPA 嘗試打破語言與文化的界限，重視多元文化與包容性，讓來自不同背景的學員都能在短暫的相處中互相交流，共同成長。</p>
                 </div>
                 <img class="value-card-img" src="../src/img/img_value_muticulture.png" alt="">
             </div>
@@ -188,40 +178,49 @@
     </section>
     <!-- Contact Us -->
     <section>
-        <div class="py-40 px-30">
+        <div id="contact" class="contact m-container">
             <div class="title-wrap">
                 <h1 class="font-semibold">Contact Us</h1>
             </div>
-            <div class="flex">
+            <div class="contact-detail">
                 <ul class="text-neutral-400">
                     <li class="pb-3">Line ID:  @wearesnopa</li>
                     <li class="pb-3">Wechat ID:  wearesnopa</li>
-                    <li class="pb-4">What's app ID: +886 912 559 288</li>
-                    <li class="pb-4">3 Chome-16-3 Otemachi, Maebashi, Gunma 371-0026, Japan</li>
-                    <div class="flex p-4 gap-4 bg-neutral-50 rounded-lg">
+                    <li class="pb-4">What's app ID: +1 (232) 576-98-07</li>
+                    <li class="pb-4">371-0022 群馬県前橋市千代田町 1 丁目 13-17</li>
+                    <div>
                         <img class="w-6 h-6 boder border-neutral-400 rounded-full" src="../src/img/icon_subway.svg" alt="">
-                        <p>近群馬県，前橋駅南口站</p>
+                        <p>「遊園地坂下」下車，徒歩 3 分</p>
                     </div>
                 </ul>
-                <div style="width: 460px; height: 320px" class="ml-auto bg-neutral-50"></div>
-            </div>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416.3976742471233!2d139.06502402433884!3d36.395076509915455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ef3d507c1ad75%3A0x8ec64897c9f246b6!2z6YO15L6_44Od44K544OI!5e0!3m2!1szh-TW!2stw!4v1730049020748!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
         </div>
     </section>
     <!-- Footer -->
     <section>
-        <div class="footer flex py-20 px-30 bg-neutral-700 align-bottom">
-            <div class="w-3/12">
-                <img class="logo-mark w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
-                <p class="caption text-neutral-100">+1 (232) 576-98-07</p>
-                <p class="mt-3 caption text-neutral-100">3 Chome-16-3 Otemachi, Maebashi, Gunma 371-0026, Japan</p>
-            </div>
-            <div class="ml-auto mt-auto">
-                <ul class="flex gap-4 flex-wrap text-neutral-0">
+        <div class="footer">
+            <div class="rwd-mobile">
+                <ul class="gap-4 flex-wrap text-neutral-0">
                     <li class="menu-item"><a>Home</a></li>
                     <li class="menu-item"><a>Ski Courses</a></li>
                     <li class="menu-item"><a>About Us</a></li>
                     <li class="menu-item"><a>Reserve</a></li>
-                    <li class="menu-item"><a></a>Snow Status</li>
+                    <li class="menu-item"><a>Snow Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-left">
+                <img class="logo-mark w-24 h-24 mb-4" src="../src/img/img_logo_logomark.svg" alt="..." />
+                <p class="caption text-neutral-100">+1 (232) 576-98-07</p>
+                <p class="mt-3 caption text-neutral-100">371-0022 群馬県前橋市千代田町 1 丁目 13-17</p>
+            </div>
+            <div class="footer-right">
+                <ul class="rwd-desktop flex gap-4 flex-wrap text-neutral-0">
+                    <li class="menu-item"><a href="/dist/index.html">Home</a></li>
+                    <li class="menu-item"><a href="/dist/course.html">Ski Courses</a></li>
+                    <li class="menu-item"><a href="/dist/about.html">About Us</a></li>
+                    <li class="menu-item"><a href="/dist/reserve.html">Reserve</a></li>
+                    <li class="menu-item"><a href="/dist/status.html">Snow Status</a></li>
                 </ul>
                 <span class="block caption pt-4 text-end text-neutral-100">© Copyright 2024. SNOPA. All Right Reserved.</span>
             </div>

@@ -4,6 +4,30 @@
     justify-content: space-between;
 }
 
+.founder {
+    display: flex;
+    gap: 160px;
+}
+
+.f-message {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.f-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 120px;
+    gap: 40px;
+}
+
+.history {
+    display: flex;
+    gap: 160px;
+}
+
 .timeline {
     position: relative;
 }
@@ -18,7 +42,7 @@
 
 /* h3 line-height 改寫 mb 讓線不會向上凸出 */
 .timeline-item h3 {
-    line-height: 0; 
+    line-height: 40px; 
     margin-bottom: 12px;
 }
 
@@ -45,6 +69,7 @@
 
 .value-card-content {
     margin-top: 80px;
+    margin-right: 24px;
     width: 40%;
 }
 
@@ -58,4 +83,173 @@
     width: 400px;
     height: auto;
     margin-left: auto;
+}
+
+.contact {
+    flex-direction: column;
+}
+
+.contact-detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-detail div {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    min-width: 400px;
+    background-color: var(--neutral-50);
+    border-radius: 8px;
+}
+
+.map {
+    width: 460px;
+    height: 320px;
+    margin-left: 24px;
+}
+
+/**** RWD ****/
+
+@media (min-width: 1536px) {
+    .f-detail {
+        gap: 64px;
+        padding-top: 64px;
+        justify-content: flex-end;
+        text-align: right;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .founder {
+        gap: 120px;
+    }
+
+    .f-detail {
+        padding-top: 80px;
+    }
+
+    .f-detail img {
+        width: 60%;
+        max-width: 240px
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .hero .side-nav {
+        margin-right: auto;
+    }
+
+    .founder,
+    .history {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .f-message {
+        gap: 64px;
+    }
+
+    .f-detail {
+        gap: 64px;
+        padding-top: 64px;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .timeline .timeline-item {
+        padding: 0 0 60px 40px;
+        gap: 40px;
+    } 
+
+    .value-card-content {
+        width: 50%;
+    }
+
+    .value-card .value-card-img {
+        width: 320px;
+    }
+
+    .contact-detail div {
+        min-width: 0;
+        width: fit-content;
+    }
+
+    .map {
+        width: 368px;
+        height: 256px;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .hero .logo-mark {
+        width: 80px;
+    }
+
+    .founder {
+        gap: 64px;
+    }
+
+    .f-message {
+        gap: 40px;
+    }
+    
+    .f-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline .timeline-item {
+        flex-direction: column;
+        padding: 0 0 40px 32px;
+        gap: 4px;
+    } 
+
+    .timeline .timeline-item p {
+        padding-top: 8px;
+    }
+
+    .value-card {
+        flex-direction: column;
+    }
+
+    .value-card-content {
+        width: 100%;
+    }
+
+    .value-card .value-card-img {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 40px;
+    }
+
+    .contact.m-container {
+        gap: 0;
+    }
+
+
+    .contact-detail {
+        flex-direction: column;
+    }
+
+    .contact-detail div {
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .map {
+        margin-left: 0;
+        width: 100%;
+    }
 }

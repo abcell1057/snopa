@@ -1,5 +1,36 @@
+.index-hero {
+    display: flex;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 96px;
+    min-height: 768px;
+    height: 100vh;
+    max-width: 1920px;
+}
+
 .hero-logo-mark {
     opacity: 20%;
+    position: absolute;
+    top: 80px;
+    left: 96px;
+    width: 680px;
+    z-index: -1;
+}
+
+.slogan-section {
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    justify-content: end;
+    align-items: center;
+    padding-top: 180px;
+}
+
+.slogan-section .text-wrap {
+    max-width: 660px;
 }
 
 video {
@@ -22,6 +53,11 @@ svg rect {
 }
 
 /* special */
+.cards-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
 
 .card-special {
     display: flex;
@@ -39,21 +75,46 @@ svg rect {
 }
 
 /* service */
+.servie {
+    min-height: calc(664px * 4);
+}
+
+.servie .title-wrap {
+    display: flex;
+    gap: 160px;
+    padding: 200px 120px 120px 120px;
+}
+
+.sticky-section {
+    position: sticky;
+    top: 100px;
+}
+
+.card-group-service {
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    padding-left: 80px;
+    padding-bottom: 160px;
+}
 
 .card-service {
     display: flex;
+    padding: 12px 40px;
     gap: 48px;
 }
 
 .card-service-content {
     display: block;
     width: 468px;
-    padding: 12px 32px;
 }
 
 .card-service img {
     width: 300px;
     height: 400px;
+    max-width: none;
 }
 
 .order-wrap {
@@ -141,9 +202,8 @@ svg rect {
 /* FAQs */
 
 .accordion-item {
-    padding: 48px 0px;
+    padding: 48px 0 48px 120px;
     border-bottom: 1px solid var(--nuetral-200);
-    padding-left: 120px;
     position: relative
 }
 
@@ -197,7 +257,7 @@ svg rect {
     background-color: var(--primary-400);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
-    transition: 0.5s transform ease-in-out; /* 讓偽元素的寬度適配文字的實際寬度 */
+    transition: 0.2s transform ease-in-out; /* 讓偽元素的寬度適配文字的實際寬度 */
 }
 
 .accordion-title:hover h3::after {
@@ -206,13 +266,16 @@ svg rect {
 
 /* 滑鼠移開後底線的反向動畫 */
 .accordion-title h3::after {
-    transition: width 0.4s ease-in-out; 
+    transition: width 0.2s ease-in-out; 
 }
 
 .accordion-content {
-    margin-top: 48px;
-    padding: 12px 88px 12px 0;
+    background-color: var(--neutral-0);
+    margin-top: 40px;
+    padding: 20px 32px 20px 16px;
+    border-radius: 8px;
     position: relative;
+    width: calc(100% - 60px);
 }
 
 /* A */ 
@@ -266,4 +329,146 @@ svg rect {
 /* footer */
 .menu-item {
     padding: 8px 0;
+}
+
+/**** RWD ****/
+
+@media (min-width: 1536px) {
+
+}
+
+@media (max-width: 1280px) {
+
+}
+
+@media (max-width: 1024px) {
+    
+    .slogan-section {
+        width: 80%;
+        padding-top: 80px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-logo-mark {
+        width: 560px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .cards-group {
+        grid-template-columns: 1fr;
+    }
+
+    .servie {
+        min-height: 0;
+    }
+
+    .servie .title-wrap {
+        flex-direction: column;
+        padding: 80px 48px;
+        gap: 40px;
+        margin-bottom: 0;
+    }
+
+    .sticky-section {
+        display: flex;
+    }
+    
+    .card-group-service {
+        flex-direction: column;
+        padding: 80px 48px;
+    }
+
+    .card-service {
+        align-items: end;
+        padding: 0;
+    }
+
+    .card-service-content {
+        width: 60%;
+        padding-bottom: 40px;
+    }
+
+    .card-service img {
+        width: 240px;
+        height: 320px;
+        margin-left: auto;
+    }
+
+    /*FAQ*/
+    .accordion-item {
+        padding: 24px 0 24px 60px;
+    }
+
+    .accordion-title {
+        width: calc(100% - 64px);
+    }
+
+    .accordion-title::before {
+        width: 3rem;
+        height: 3rem;
+        left: -60px;
+    }
+
+    .accordion-title h3 {
+        /* width: calc(100% - 52px); */
+        
+    }
+    .accordion-toggle {
+        right: -60px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    
+    .hero-logo-mark {
+        top: 40%;
+        width: 90%;
+    }
+    .slogan-section {
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+    .servie .title-wrap {
+        padding: 40px 24px;
+    }
+
+    .card-group-service {
+        padding: 40px 24px;
+    }
+
+    .card-service {
+        flex-direction: column;
+        margin-bottom: 32px;
+        gap: 24px;
+    }
+
+    .card-service-content {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .order-wrap {
+        margin-bottom: 40px;
+    }
+
+    .order-wrap + div {
+        padding-bottom: 24px;
+    }
+
+    .card-service img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 440px) {
+    .slogan-section h1 {
+        font-size: 3.5rem;
+    }
 }

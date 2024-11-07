@@ -57,6 +57,16 @@ module.exports = {
         'h2': { fontSize: theme('fontSize.6xl') }, 
         'h3': { fontSize: theme('fontSize.3xl') }, 
         'h4': { fontSize: theme('fontSize.2xl') }, 
+        'body': { fontSize: theme('fontSize.basefont') }, 
+
+        '@media (max-width: 640px)': {
+          'h1': { fontSize: theme('fontSize.6xl') }, 
+          'h2': { fontSize: theme('fontSize.5xl') }, 
+          'h3': { fontSize: theme('fontSize.2xl') }, 
+          'h4': { fontSize: theme('fontSize.xl') }, 
+          'body': { fontSize: theme('fontSize.smfont') }, 
+        },
+        
         ':root': {
           '--primary-400': theme('colors.primary.400'), // 定義顏色變數後可在 CSS 中使用
           '--primary-100': theme('colors.primary.100'), 

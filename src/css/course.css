@@ -1,8 +1,15 @@
 /* level */
+.level {
+    padding: 120px 100px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .level-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
     max-width: 271px;
 }
@@ -11,10 +18,10 @@
     padding: 24px;
     margin-bottom: 32px;
     min-height: 144px;
-    align-items: center;
     background-color: var(--neutral-0);
     border-radius: 80px;
     text-align: center;
+    align-content: center;
 }
 
 /* message bubble 暫放 */
@@ -30,6 +37,15 @@
 }
 
 /* skiing park */
+.ski-park-list {
+    display: flex;
+    padding-top: 120px;
+    gap: 40px; 
+}
+
+.right-content {
+    margin-left: auto;
+}
 
 /* content-rightside */
 .w-course-content {
@@ -48,25 +64,67 @@
     border-bottom: 1px solid var(--neutral-100);
 }
 
-.park-wrap h2 {
+.park-oder  {
     min-width: 76px;
-    margin-right: 40px;
-    color: var(--neutral-50);
     font-weight: 600;
+    color: var(--neutral-50);
+    transition: all 0.8s cubic-bezier(.19,1,.22,1);
+}
+
+.park-wrap .text-wrap {
+    padding-left: 52px;
+    margin-right: 40px;
+    color: var(--neutral-400);
+    transition: all .2s ease;
+}
+
+.price-section {
+    display: flex;
+    padding-top: 120px;
+    gap: 40px;
 }
 
 .arrow-box {
-    padding: 40px 8px;
+    width: 32px;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     background-color: var(--neutral-20);
     border-radius: 8px;
+    transition: all 0.8s cubic-bezier(.19,1,.22,1), background-color .2s linear;
 }
+
 
 .arrow-box img {
     width: 16px;
     height: 16px;
 }
 
+/* hover */
+.park-wrap:hover .park-oder {
+    padding-left: 8px;
+}
+
+.park-wrap:hover .text-wrap {
+    padding-left: 40px;
+}
+
+.park-wrap:hover h3,
+.park-wrap:hover h2 {
+    color: var(--primary-400);
+}
+
+
+.park-wrap:hover .arrow-box {
+    width: 48px;
+    background-color: var(--primary-400);
+}
+
+.park-wrap:hover img{
+    filter: brightness(500%) saturate(0%);
+}
 
 .table-area {
     border-radius: 8px;
@@ -115,3 +173,129 @@
     left: 0;
     top: 16px;
 }    
+
+/**** RWD ****/
+
+@media (min-width: 1536px) {
+
+}
+
+@media (max-width: 1280px) {
+
+    .level-item {
+        width: 30%;
+    }
+
+    .level-item .content {
+        padding: 16px;
+        border-radius: 64px;
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+    
+    .level {
+        padding: 100px 48px 64px 48px;
+        gap: 16px;
+    }
+    
+    .ski-park-list {
+        flex-direction: column;
+        padding-top: 80px;
+        gap: 40px; 
+    }
+
+    .park-list {
+        width: 100%;
+    }
+
+    .right-content {
+        margin-left: 0;
+    }
+    
+    .w-course-content {
+        width: 100%;
+    }
+
+    .price-section {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    
+    .level {
+        padding: 40px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .level-item {
+        flex-direction: row-reverse;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 480px;
+        padding-bottom: 0px;
+    }
+
+    .level-item img {
+        width: 40%;
+        margin-right: 16px;
+        margin-top: auto;
+    }
+
+    .park-wrap {
+        padding: 12px 8px 12px 8px;
+    }
+
+    .park-wrap .park-oder {
+        min-width: 60px;
+    }
+
+    .park-wrap .text-wrap {
+        padding-left: 16px;
+        margin-right: 24px;
+    }
+
+    /* hover */
+    .park-wrap:hover .park-oder {
+        padding-left: 0px;
+    }
+
+    .park-wrap:hover .text-wrap {
+        padding-left: 12px;
+    }
+
+    .park-wrap:hover .arrow-box {
+        width: 32px;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .level {
+        gap: 40px;
+    }
+    
+    .level-item {
+        flex-direction: column;
+    }
+
+    .level-item .content {
+        width: 80%;
+        padding: 12px;
+        margin-left: auto;
+        margin-bottom: 12px;
+    }
+
+    .level-item img {
+        width: 50%;
+    }
+
+}

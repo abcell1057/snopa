@@ -1,3 +1,9 @@
+
+
+
+
+/* Testimonial
+
 // 請先讀完 DOM 文本後再執行各 function
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -15,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+*/
 
-
+/* FAQs */
 $(document).ready(function () {
     // 預設打開第一個
     $('.accordion-item:first-child').addClass('active');
